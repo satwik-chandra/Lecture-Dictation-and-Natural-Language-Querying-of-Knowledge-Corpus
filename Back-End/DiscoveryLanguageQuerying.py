@@ -3,7 +3,13 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import ApiException
 import json
 
-authenticator = IAMAuthenticator('umf4q-OA2qkJvgWZhkeLe8e0Q8vsCufrJgmEu0ocbfxu')
+API_key = "umf4q-OA2qkJvgWZhkeLe8e0Q8vsCufrJgmEu0ocbfxu"
+Collection_ID = "426536f5-e1a3-4609-b0e7-176851a7a148" #to be changed to teh lecture transcripts collection ID
+Configuration_ID = "d0155eb1-6897-4759-8fd2-ac657e03b007" #to be changed to the lecture transcripts configuration ID
+Environment_ID = "b2143037-e1b7-4a25-9273-da6a00d6beb1" #to be changed to the lecture transcripts environment ID
+
+
+authenticator = IAMAuthenticator(API_key)
 discovery = DiscoveryV1(
     version='2019-04-30',
     authenticator=authenticator
@@ -11,59 +17,36 @@ discovery = DiscoveryV1(
 
 discovery.set_service_url('https://api.eu-gb.discovery.watson.cloud.ibm.com/instances/ee277a06-704d-45b4-a204-9dff9216fc9a')
 
+
+
+def nlp_query(query):
+    try:
+        print("query is: ",query)
+        response = discovery.query(environment_id=Environment_ID,
+                                   collection_id=Collection_ID,
+                                   natural_language_query=query,
+                                   passages=True,
+                                   count=5,
+                                   passages_count=5,
+                                   passages_characters=5000,
+                                   highlight=True,
+                                   deduplicate=True,
+                                   deduplicate_field='title'
+                                   ).get_result()
+        return response
+    except ApiException as ex:
+        print("Method failed with status code " + str(ex.code) + ": " + ex.message)
+        return "Error"
+
+
+#Not working: sort it out later
+
 """ 
-********WRAPPER FOR ALL FUNCTIONS(To Ensure error handling during coding)*********
-
-
-try:
-    
-except ApiException as ex:
-  print("Method failed with status code " + str(ex.code) + ": " + ex.message)
-
-
-  
-"""
-
-
-#get the list of all collections in a particular environment (NAME SHOULD BE REPLACED BY THE ENBNVIRONMENT NAME)
-
-""" environments = discovery.list_environments().get_result()
-print(json.dumps(environments, indent=2))
-
-system_environments = [x for x in environments['environments'] if x['name'] == 'byod']
-system_environment_id = system_environments[0]['environment_id']
-
-collections = discovery.list_collections(system_environment_id).get_result()
-system_collections = [x for x in collections['collections']]
-print(json.dumps(system_collections, indent=2)) """
-
-
-#GET THE ENVIRONMENT INFORMATION
-
-""" environment_info = discovery.get_environment(
-    'b2143037-e1b7-4a25-9273-da6a00d6beb1').get_result()
-print(json.dumps(environment_info, indent=2)) """
-
-
-#list fields across collections
-
-""" fields = discovery.list_fields('b2143037-e1b7-4a25-9273-da6a00d6beb1', ['426536f5-e1a3-4609-b0e7-176851a7a148']).get_result()
-print(json.dumps(fields, indent=2)) """
-
-#list all collections in an environment
-
-""" collections = discovery.list_collections('b2143037-e1b7-4a25-9273-da6a00d6beb1').get_result()
-print(json.dumps(collections, indent=2)) """
-
-
-#get the collection details
-
-""" collection = discovery.get_collection(
-    'b2143037-e1b7-4a25-9273-da6a00d6beb1', 
-    '426536f5-e1a3-4609-b0e7-176851a7a148').get_result()
-print(json.dumps(collection, indent=2)) """
-
-
-
-
-
+def autocomplete_query(term):
+    try:
+        response = discovery.get_autocompletion(environment_id = Environment_ID,collection_id = Collection_ID,prefix = term)
+        return response
+    except ApiException as ex:
+        print("Method failed with status code " + str(ex.code) + ": " + ex.message)
+        return "Error"
+ """
