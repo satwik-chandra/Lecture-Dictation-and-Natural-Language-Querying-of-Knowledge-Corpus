@@ -4,8 +4,8 @@ from ibm_watson import ApiException
 import json
 
 API_key = "umf4q-OA2qkJvgWZhkeLe8e0Q8vsCufrJgmEu0ocbfxu"
-Collection_ID = "426536f5-e1a3-4609-b0e7-176851a7a148" #to be changed to teh lecture transcripts collection ID
-Configuration_ID = "d0155eb1-6897-4759-8fd2-ac657e03b007" #to be changed to the lecture transcripts configuration ID
+Collection_ID = "7dd2c2c5-4317-4fd9-b4cd-91c68204c17d" #to be changed to teh lecture transcripts collection ID
+Configuration_ID = "e08d2672-c96f-43ee-aa5c-665b6550cf9f" #to be changed to the lecture transcripts configuration ID
 Environment_ID = "b2143037-e1b7-4a25-9273-da6a00d6beb1" #to be changed to the lecture transcripts environment ID
 
 
