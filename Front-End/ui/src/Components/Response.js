@@ -6,4 +6,4 @@ export const Response = ({text}) => {
     )
 }
 
-export default Response;
+export default Response
