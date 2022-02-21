@@ -1,2 +1,32 @@
-what is agile development?
-what is test driven development?
+What is software engineering?
+Who is Margaret Hamilton?
+Is software seen as an industrial process?
+Did Margaret Hamilton help in the moon landing?
+What is the sweetback project?
+What is software?
+Did Mark Andriessen create netscape?
+Do software engineers build their own tools?
+Is there an exam in this module?
+What is agile development?
+What is the textbook for this module?
+How to setup a BitBucket account?
+What is Git?
+Is there a textbook for Git?
+Which IDE should I use?
+Is VIM a good editor?
+If I am on Mac, should I use Xcode?
+Did Microsoft buy Visual Studio Code?
+Do we have to try different editors?
+How to find the lowest common ancestor?
+Do we have to build the lowest common ancestor doing unit testing?
+Are you recording live sessions?
+Do I have to come to the live sessions?
+Who is Fred Brooks?
+What is Moore's Law?
+What is the difference between mathematics and software?
+Is software arbitrary?
+Did programming in C exist in 1986?
+Is C a lower level language than Java?
+Will these high level languages be replaced in the next few years?
+What is encapsulation?
+What is test driven development?
