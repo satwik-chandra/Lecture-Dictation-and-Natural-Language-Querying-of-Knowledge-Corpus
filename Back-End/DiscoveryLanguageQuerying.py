@@ -4,9 +4,9 @@ from ibm_watson import ApiException
 import json
 
 API_key = "umf4q-OA2qkJvgWZhkeLe8e0Q8vsCufrJgmEu0ocbfxu"
-Collection_ID = "665e9d8b-ff19-4ad8-93fd-eddee01884fe" #to be changed to teh lecture transcripts collection ID
+Collection_ID = "news-en" #to be changed to teh lecture transcripts collection ID
 Configuration_ID = "2883717b-0f6c-4aa5-852b-7c9f6c3d20b2" #to be changed to the lecture transcripts configuration ID
-Environment_ID = "b2143037-e1b7-4a25-9273-da6a00d6beb1" #to be changed to the lecture transcripts environment ID
+Environment_ID = "system" #to be changed to the lecture transcripts environment ID
 
 
 authenticator = IAMAuthenticator(API_key)
@@ -26,7 +26,7 @@ def nlp_query(query):
                                    collection_id=Collection_ID,
                                    natural_language_query=query,
                                    passages=True,
-                                   count=5,
+                                   count=10,
                                    passages_count=5,
                                    passages_characters=5000,
                                    highlight=True,
@@ -50,3 +50,22 @@ def autocomplete_query(term):
         print("Method failed with status code " + str(ex.code) + ": " + ex.message)
         return "Error"
  """
+
+
+
+
+def getResponseList(query):
+    response = nlp_query(query)
+    sentences = []
+    for i in response["results"]:
+        sentences.append(i["text"])
+    return sentences
+
+query = "What is Google doing in AI?"
+
+result = getResponseList(query)
+
+
+#for pretty printing the sentences.
+""" for i in result:
+    print(i + "\n") """
