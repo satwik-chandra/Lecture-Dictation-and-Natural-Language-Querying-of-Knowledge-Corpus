@@ -27,7 +27,7 @@ def nlp_query(query):
                                    natural_language_query=query,
                                    passages=True,
                                    count=10,
-                                   passages_count=5,
+                                   passages_count=10,
                                    passages_characters=5000,
                                    highlight=True,
                                    deduplicate=True,
@@ -41,15 +41,15 @@ def nlp_query(query):
 
 #Not working: sort it out later
 
-""" 
-def autocomplete_query(term):
+ 
+""" def autocomplete_query(term):
     try:
         response = discovery.get_autocompletion(environment_id = Environment_ID,collection_id = Collection_ID,prefix = term)
         return response
     except ApiException as ex:
         print("Method failed with status code " + str(ex.code) + ": " + ex.message)
-        return "Error"
- """
+        return "Error" """
+
 
 
 
@@ -61,11 +61,10 @@ def getResponseList(query):
         sentences.append(i["text"])
     return sentences
 
-query = "What is Google doing in AI?"
 
-result = getResponseList(query)
-
+query = "What is the purpose of the course?"
+response = getResponseList(query)
 
 #for pretty printing the sentences.
-""" for i in result:
-    print(i + "\n") """
+for i in response:
+    print(i + "\n") 
