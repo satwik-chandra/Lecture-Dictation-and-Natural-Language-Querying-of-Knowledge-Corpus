@@ -6,11 +6,23 @@ export const Button = ({color, text, resp}) => {
 
     const [response, setResponse] = useState(resp)
 
-    const onClick = (e) => {
+
+    const onClick = (_e) => {
         //const respFromServer = fetchResp();
         setResponse("You pressed the Button");
-        //console.log(respFromServer);
+        AccessPython();
+
         console.log("You pressed the Button");
+    }
+    const AccessPython = (_e) => {
+        $.ajax({
+            type: "POST",
+            url: "DiscoveryLanguageQuerying.py",
+            data: { param: text}
+          }).done(function(getResponseList) {
+             console.log("Python w")
+          });
+
     }
 
     // useEffect(() => {
