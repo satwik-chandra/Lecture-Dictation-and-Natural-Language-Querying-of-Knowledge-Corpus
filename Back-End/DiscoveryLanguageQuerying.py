@@ -4,9 +4,9 @@ from ibm_watson import ApiException
 import json
 
 API_key = "umf4q-OA2qkJvgWZhkeLe8e0Q8vsCufrJgmEu0ocbfxu"
-Collection_ID = "426536f5-e1a3-4609-b0e7-176851a7a148" #to be changed to teh lecture transcripts collection ID
-Configuration_ID = "d0155eb1-6897-4759-8fd2-ac657e03b007" #to be changed to the lecture transcripts configuration ID
-Environment_ID = "b2143037-e1b7-4a25-9273-da6a00d6beb1" #to be changed to the lecture transcripts environment ID
+Collection_ID = "news-en" #to be changed to teh lecture transcripts collection ID
+Configuration_ID = "2883717b-0f6c-4aa5-852b-7c9f6c3d20b2" #to be changed to the lecture transcripts configuration ID
+Environment_ID = "system" #to be changed to the lecture transcripts environment ID
 
 
 authenticator = IAMAuthenticator(API_key)
@@ -26,8 +26,8 @@ def nlp_query(query):
                                    collection_id=Collection_ID,
                                    natural_language_query=query,
                                    passages=True,
-                                   count=5,
-                                   passages_count=5,
+                                   count=10,
+                                   passages_count=10,
                                    passages_characters=5000,
                                    highlight=True,
                                    deduplicate=True,
@@ -41,12 +41,30 @@ def nlp_query(query):
 
 #Not working: sort it out later
 
-""" 
-def autocomplete_query(term):
+ 
+""" def autocomplete_query(term):
     try:
         response = discovery.get_autocompletion(environment_id = Environment_ID,collection_id = Collection_ID,prefix = term)
         return response
     except ApiException as ex:
         print("Method failed with status code " + str(ex.code) + ": " + ex.message)
-        return "Error"
- """
+        return "Error" """
+
+
+
+
+
+def getResponseList(query):
+    response = nlp_query(query)
+    sentences = []
+    for i in response["results"]:
+        sentences.append(i["text"])
+    return sentences
+
+
+query = "What is the purpose of the course?"
+response = getResponseList(query)
+
+#for pretty printing the sentences.
+for i in response:
+    print(i + "\n") 
