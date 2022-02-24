@@ -3,18 +3,35 @@ import './App.css';
 import Button from './Components/Button.js'
 import Response from './Components/Response.js'
 
+import { useState, useEffect } from 'react'
+
 function App() {
+
+  const [responses, setResponses] = useState([])
+
+  useEffect(() => {
+       const getResp = async () => {
+       const respFromServer = await fetchResp()
+       setResponses(respFromServer)
+       }
+
+      getResp()
+
+    }, [])
+
+  const fetchResp = async () => {
+      const res = await fetch('http://localhost:5000/responses')
+      const data = await res.json()
+
+      console.log(data)
+      console.log(typeof data)
+      return data
+  }
+
   return (
     <div className="Container">
       <h1>Hello World</h1>
-      <Button color='blue' text='Run Query' resp ='p'/>
-      {/* <Response text = 'We and our partners store
-        and/or access information on a device, such
-        as cookies and process personal data, such
-        as unique identifiers and standard information
-        sent by a device for personalised ads and content,
-        ad and content measurement, and audience insights,
-        as well as to develop and improve products.'/> */}
+      <Button color='blue' text='the button' resp ='p' data={responses}/>
     </div>
   );
 }
