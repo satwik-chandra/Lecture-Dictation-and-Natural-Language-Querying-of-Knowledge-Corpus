@@ -1,0 +1,1 @@
+for natural language queries: localhost:<portNumber>/api/discovery/query/<your~query>
