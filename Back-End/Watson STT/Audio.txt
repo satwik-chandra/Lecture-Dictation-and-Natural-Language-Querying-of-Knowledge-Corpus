@@ -1,0 +1,9 @@
+Supported Audio formats for Watson STT have several properties.
+Compression type and audio length per 100 MB are the most important
+for our use case. We values the accuracy and processing speed which
+we can handle these audio files.
+The options for audio formats with a lossless compression are flac
+and mp3.
+Upon testing conversion using Audacity 1 hour of lecture material
+was ~680 MB as an mp3 and 190 MB as flac. For this reason we are
+flac files however other formats are easily supported.
