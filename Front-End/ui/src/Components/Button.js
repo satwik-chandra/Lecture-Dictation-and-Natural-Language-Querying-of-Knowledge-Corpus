@@ -7,29 +7,24 @@ export const Button = ({color, text, resp, data}) => {
 
     const [response, setResponse] = useState(resp)
 
-<<<<<<< HEAD
 
     const onClick = (_e) => {
         //const respFromServer = fetchResp();
-        setResponse("You pressed the Button");
-        AccessPython();
-=======
-    const onClick = (_e) => {
-        setResponse(data[0].resp);
->>>>>>> origin/main
+        setResponse(data[0]);
+        //AccessPython();
 
-        console.log("You pressed the Button");
+        console.log("Run Query: '/n' Google and AI");
     }
-    const AccessPython = (_e) => {
-        $.ajax({
-            type: "POST",
-            url: "DiscoveryLanguageQuerying.py",
-            data: { param: text}
-          }).done(function(getResponseList) {
-             console.log("Python w")
-          });
+    // const AccessPython = (_e) => {
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "DiscoveryLanguageQuerying.py",
+    //         data: { param: text}
+    //       }).done(function(getResponseList) {
+    //          console.log("Python w")
+    //       });
 
-    }
+    // }
 
     return (
     <div>
