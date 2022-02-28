@@ -20,9 +20,8 @@ function App() {
     }, [])
 
   const fetchResp = async () => {
-      const res = await fetch('http://localhost:5000/responses')
+      const res = await fetch('Access-Control-Allow-Origin', 'http://localhost:3001/api/discovery/query/google-and-ai')
       const data = await res.json()
-
       console.log(data)
       console.log(typeof data)
       return data
@@ -31,7 +30,7 @@ function App() {
   return (
     <div className="Container">
       <h1>Hello World</h1>
-      <Button color='blue' text='the button' resp ='p' data={responses}/>
+      <Button color='blue' text='Run Query: Google and AI' resp ='p' data={responses}/>
     </div>
   );
 }
