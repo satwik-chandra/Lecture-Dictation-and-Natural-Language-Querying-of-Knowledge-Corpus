@@ -30,3 +30,74 @@ Is C a lower level language than Java?
 Will these high level languages be replaced in the next few years?
 What is encapsulation?
 What is test driven development?
+What is Ex Machina?
+What is Somerville's book?
+What is the difference between plan-driven and agile?
+Do we have to do both plan-driven and agile development?
+What does Ian Somerville say about software processes?
+What is the task of the development team?
+What to do when we want to study software development processes?
+What is a model?
+What are the three models?
+What is the waterfall model?
+Is waterfall model document driven?
+Is waterfall model slow?
+What is incremental development?
+Is incremental development about delivering prototypes?
+Is incremental development similar to waterfall development?
+Does incremental development require parallel activity?
+Is there a development methodology built around reuse?
+Is reuse model risky?
+Is waterfall model plan-driven or agile?
+Was software seen as rigorous?
+What are the problems with the waterfall model?
+Is robustness a problem with waterfall model?
+Is waterfall model appropriate for large scale software?
+What happened when waterfall was found to be too heavy?
+Is incremental development agile and plan-driven?
+What are the benfits of incremental development?
+Is cost of change expensive and difficult to do in waterfall process?
+Is cost of change low for incremental development?
+Does incremental allow for customers to feedback earlier?
+Is software written when it only has commercial benefits to somebody?
+What are the problems of incremental development?
+Is incremental development architecturally hard?
+Why did engineers decide on the waterfall model?
+Where would you use incremental development?
+What is reuse orientated software about?
+What are the kinds of things that will be reused?
+Is the world largely dominated by service delivery or packaged software delivery?
+What open source software are most web services we interact with on a day to day basis using?
+What are the challenges to reuse?
+What is the reality of open source development?
+What does a developer using open source software need to be aware of?
+Should I find a piece of existing software that does the job for me?
+What are the software processes?
+What does requirements elicitation analysis lead to?
+When does a system architexture get implemented?
+Is the waterfall model a bad idea?
+Are the development processes not good at dealing with change?
+Is agile not a silver bullet?
+What is the Unix pipe?
+Should you overengineer your code?
+What do agile people do?
+How would you deliver a piece of software on an incremental basis?
+Is there a need for rapid software development?
+When was agile development created?
+Is there documentation in agile development?
+What is the agile manifesto?
+Why is the agile process popular?
+Where can agile be applied?
+Does agile work for small teams?
+What does agile discourage?
+Where does agile not work well?
+Are there no specifications in agile development?
+How to know if an agile developing team is making progress?
+Are there challenges around software development and contracts?
+Is agile software maintainable?
+Is agile overly dependant on keeping team together?
+What is Docker?
+How to test if Docker is running?
+
+
+
