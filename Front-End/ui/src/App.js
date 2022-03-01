@@ -20,7 +20,7 @@ function App() {
     }, [])
 
   const fetchResp = async () => {
-      const res = await fetch('Access-Control-Allow-Origin', 'http://localhost:3001/api/discovery/query/google-and-ai')
+      const res = await fetch('http://localhost:3001/api/discovery/query/google-and-ai')
       const data = await res.json()
       console.log(data)
       console.log(typeof data)

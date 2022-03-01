@@ -9,22 +9,14 @@ export const Button = ({color, text, resp, data}) => {
 
 
     const onClick = (_e) => {
-        //const respFromServer = fetchResp();
-        setResponse(data[0]);
-        //AccessPython();
-
+        // console.log(typeof data[0])
+        // console.log(data[0])
+        // console.log(typeof data[0].headers)
+        // console.log(data[0].statusText)
+        // setResponse(data[0].statusText);
+        setResponse("Place Holder until data is formatted correctly");
         console.log("Run Query: '/n' Google and AI");
     }
-    // const AccessPython = (_e) => {
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "DiscoveryLanguageQuerying.py",
-    //         data: { param: text}
-    //       }).done(function(getResponseList) {
-    //          console.log("Python w")
-    //       });
-
-    // }
 
     return (
     <div>
