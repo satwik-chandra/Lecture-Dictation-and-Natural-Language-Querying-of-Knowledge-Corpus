@@ -9,12 +9,7 @@ export const Button = ({color, text, resp, data}) => {
 
 
     const onClick = (_e) => {
-        // console.log(typeof data[0])
-        // console.log(data[0])
-        // console.log(typeof data[0].headers)
-        // console.log(data[0].statusText)
-        // setResponse(data[0].statusText);
-        setResponse("Place Holder until data is formatted correctly");
+        setResponse(data['result']['results'][0]['text']);
         console.log("Run Query: '/n' Google and AI");
     }
 
