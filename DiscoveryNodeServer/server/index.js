@@ -5,31 +5,27 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const DiscoveryV1 = require('ibm-watson/discovery/v1');
+const projectID = '2507e3f4-9e97-4e0c-a9c1-2bf1cd2ae471'; 
+
+const DiscoveryV2 = require('ibm-watson/discovery/v2');
 const { IamAuthenticator } = require('ibm-watson/auth');
 
-const discovery = new DiscoveryV1({
-  version: '2018-12-03',
+const discovery = new DiscoveryV2({
+  version: '2020-08-30',
   authenticator: new IamAuthenticator({
-    apikey: 'umf4q-OA2qkJvgWZhkeLe8e0Q8vsCufrJgmEu0ocbfxu',
+    apikey: 'WIgvKeM8B3zcEEgVwX99IdjYUlKv2eRzhQh4qi6bqiRe',
   }),
-  serviceUrl: 'https://api.eu-gb.discovery.watson.cloud.ibm.com/instances/ee277a06-704d-45b4-a204-9dff9216fc9a',
+  serviceUrl: 'https://api.eu-gb.discovery.watson.cloud.ibm.com/instances/881f601a-c215-493a-bd7e-1f94b5ce8f53',
 });
 
 var queryParams = {
-  environmentId: 'system',
-  collectionId: 'news-en',
+  projectId: projectID,
   naturalLanguageQuery: "",  //this is the query that is passed to the discovery service
-  passages: true,
-  count: 3,
-  passagesCharacters: 200,
-  deduplicate: false,
 };
 
 var auto_complete_prams = {
-  environmentId: 'system',
-  collectionId: 'news-en',
-  count: 3,
+  projectId: projectID,
+  count: 7,
   prefix: "",  //this is the query that is passed to the discovery service
 };
 
@@ -42,13 +38,13 @@ async function getResponse(query) {
   return response;
 }
 
-app.use(function (req, res, next) {
+   app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
-});
+}); 
 
 //API endpoint that uses getResponse function to get the response for a natural language query
 app.get("/api/discovery/query/:query", async (req, res) => {
