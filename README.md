@@ -10,3 +10,6 @@ Using IBM Watson Discovery with trainable queries - the whole set of transcripti
 
 *#3.Creation of a User Interface that would allow searching of answer passages and links to videos covering particular material :*
 Using the Discovery API a query front-end could be built that would allow - entry of natural language queries, filtering by entities and keywords, links to source video clips.
+
+
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://github.com/satwik-chandra/Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus/tree/main/DiscoveryNodeServer/server)
