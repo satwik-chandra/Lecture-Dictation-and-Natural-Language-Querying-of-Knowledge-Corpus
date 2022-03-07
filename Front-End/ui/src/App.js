@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Button from './Components/Button.js'
 import Response from './Components/Response.js'
+import SearchBar from './Components/SearchBar.js'
 
 import { useState, useEffect } from 'react'
 
@@ -31,6 +31,7 @@ function App() {
     <div className="Container">
       <h1>Hello World</h1>
       <Button color='blue' text='Run Query: Google and AI' resp ='p' data={responses}/>
+      <SearchBar title='query: ' inputV = 'Sub' value = 't' resp='here' data={responses}/>
     </div>
   );
 }
