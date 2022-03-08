@@ -3,14 +3,10 @@ import { useState, useEffect } from 'react'
 import Response from './Response.js'
 import $ from 'jquery'
 
-export const Button = ({color, text, resp, data}) => {
-
-    const [response, setResponse] = useState(resp)
-
+export const Button = ({color, text}) => {
 
     const onClick = (_e) => {
-        setResponse(data['result']['results'][0]['text']);
-        console.log("Run Query: '/n' Google and AI");
+        console.log("Button has been pressed");
     }
 
     return (
@@ -18,7 +14,6 @@ export const Button = ({color, text, resp, data}) => {
         <button onClick={onClick} 
         style={{backgroundColor: color}}
         className='btn'>{text}</button>
-       <Response key ={"1"} text = {response}/>
     </div>
     )
 }

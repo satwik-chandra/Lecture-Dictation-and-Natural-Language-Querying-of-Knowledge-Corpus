@@ -2,10 +2,11 @@ import React from 'react'
 import { useState, useEffect} from 'react'
 import Response from './Response.js'
 
-export const SearchBar = ({title, inputV, value, resp}) => {
+export const SearchBar = ({title, inputV, value, resp, link}) => {
 
     const [newValue, setValue] = useState(value)
     const [response, setResponse] = useState(resp)
+    const [showLink, setShowLink] = useState(link)
  
    const fetchResp = async () => {
        const res = await fetch('http://localhost:3001/api/discovery/query/'+newValue)
@@ -25,6 +26,7 @@ export const SearchBar = ({title, inputV, value, resp}) => {
         const respFromServer = await fetchResp()
         try {
             setResponse(respFromServer['result']['results'][0]['text']);
+            setShowLink(true)
         }catch(err) {
             setResponse('Sorry! No results found :(');
           }
@@ -39,7 +41,7 @@ export const SearchBar = ({title, inputV, value, resp}) => {
                 </label> 
                 <input type="submit" value={inputV}/>
             </form>
-            <Response key ={"1"} text = {response}/>
+            <Response key ={"1"} text = {response} showLink = {showLink}/>
         </div>
     )
 }
