@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export const Response = ({text}) => {
+export const Response = ({text, showLink}) => {
     return (
-        <p>{text}</p>
+        <div>
+            <p>{text}</p>
+            {showLink && <Link to='/lecture'>Go to Lecture</Link>}
+        </div>
     )
 }
 
