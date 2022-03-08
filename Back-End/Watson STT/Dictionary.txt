@@ -1,0 +1,89 @@
+This is a short enough video
+I’m going to work through the series of commits
+you should be able to access the GitHub API
+what you’re trying to consume
+nature of the data
+Use that data to do visualisations
+I’m showing you my desktop
+So we have the Emacs session here
+I’ve just listed on a scratch pad
+Listed the commits
+I have a window here
+Set up a Docker based database
+Docker based database access
+The project is call CSU
+Python GitHub
+I have a read me
+Writing a very simple python script
+just a hello world
+you’ll need to install python
+install a tool called PIP
+if you’re a Python programmer and you’re watching
+know how to do this stuff in Python
+how do we run it?
+Let’s just clear the screen
+I’m running it on Python three
+Python three script dot p y
+So that was our first commit
+I’m going to check out the next commit
+That basically will install PIP for you
+Python three get PIP
+Make sure you include that in your project
+Script up everything that you would otherwise need to do manually
+We’re importing something called the pyGitHub library
+any documentation
+find the documentation for the various things you want to use
+I’m just importing GitHub
+Need to install the PyGitHub Library
+PIP install that
+This is an access token
+Go to the GitHub developer API
+Create yourself a new token
+It’s been deleted
+in a strict development environment
+You should not be putting things like tokens in source control
+A token is like a password
+Low risk password
+Create a github object
+Pull back some user details
+It provides a function
+Get user
+A method I should say
+A GitHub API call to get the user details
+We’re just printing out some of this
+a barebones building up an API from scratch
+With something like Haskell
+Use an existing library
+The value of an existing library 
+documentation on the library
+Documentation on the API
+We’re going to expect to get some content
+printed out
+we can scroll back
+running the same script
+created any run scripts
+from the demonstrator’s account
+Web browser
+We have the same basic details
+T C D 
+TCD Dublin
+edit the profile
+That data
+when I run it now
+We’re getting a type error
+Concatenate a string 
+Can’t concatenate a non type
+Python equivalent of nothing or null or void
+There is no dot location
+Dynamic typing
+What we set in
+The data source
+Edit the profile
+Obviously get back data
+Go back to our scratch pad
+Worry about the data type
+Library to pull back data
+Clean and test the data
+We’ll do a git checkout 
+
+

@@ -8,3 +8,5 @@ and mp3.
 Upon testing conversion using Audacity, 1 hour of lecture material
 was ~680 MB as an mp3 and 190 MB as a .flac. For this reason we are
 flac files however other formats are easily supported.
+
+Other
