@@ -1,12 +1,12 @@
 This is a short enough video
-I’m going to work through the series of commits
+Iï¿½m going to work through the series of commits
 you should be able to access the GitHub API
-what you’re trying to consume
+what youï¿½re trying to consume
 nature of the data
 Use that data to do visualisations
-I’m showing you my desktop
+Iï¿½m showing you my desktop
 So we have the Emacs session here
-I’ve just listed on a scratch pad
+Iï¿½ve just listed on a scratch pad
 Listed the commits
 I have a window here
 Set up a Docker based database
@@ -16,30 +16,30 @@ Python GitHub
 I have a read me
 Writing a very simple python script
 just a hello world
-you’ll need to install python
+youï¿½ll need to install python
 install a tool called PIP
-if you’re a Python programmer and you’re watching
+if youï¿½re a Python programmer and youï¿½re watching
 know how to do this stuff in Python
 how do we run it?
-Let’s just clear the screen
-I’m running it on Python three
+Letï¿½s just clear the screen
+Iï¿½m running it on Python three
 Python three script dot p y
 So that was our first commit
-I’m going to check out the next commit
+Iï¿½m going to check out the next commit
 That basically will install PIP for you
 Python three get PIP
 Make sure you include that in your project
 Script up everything that you would otherwise need to do manually
-We’re importing something called the pyGitHub library
+Weï¿½re importing something called the pyGitHub library
 any documentation
 find the documentation for the various things you want to use
-I’m just importing GitHub
+Iï¿½m just importing GitHub
 Need to install the PyGitHub Library
 PIP install that
 This is an access token
 Go to the GitHub developer API
 Create yourself a new token
-It’s been deleted
+Itï¿½s been deleted
 in a strict development environment
 You should not be putting things like tokens in source control
 A token is like a password
@@ -50,19 +50,19 @@ It provides a function
 Get user
 A method I should say
 A GitHub API call to get the user details
-We’re just printing out some of this
+Weï¿½re just printing out some of this
 a barebones building up an API from scratch
 With something like Haskell
 Use an existing library
 The value of an existing library 
 documentation on the library
 Documentation on the API
-We’re going to expect to get some content
+Weï¿½re going to expect to get some content
 printed out
 we can scroll back
 running the same script
 created any run scripts
-from the demonstrator’s account
+from the demonstratorï¿½s account
 Web browser
 We have the same basic details
 T C D 
@@ -70,9 +70,9 @@ TCD Dublin
 edit the profile
 That data
 when I run it now
-We’re getting a type error
+Weï¿½re getting a type error
 Concatenate a string 
-Can’t concatenate a non type
+Canï¿½t concatenate a non type
 Python equivalent of nothing or null or void
 There is no dot location
 Dynamic typing
@@ -84,6 +84,44 @@ Go back to our scratch pad
 Worry about the data type
 Library to pull back data
 Clean and test the data
-We’ll do a git checkout 
-
+Weï¿½ll do a git checkout 
+three three one two
+at my practice
+I'm a teacher
+when I show you that little video that I keep playing top
+it's not by the
+somebody else's of a deadly link up
+pledges start playing it
+another mission
+building Lennix
+notes the sort of sort of a sort of bowls there
+we've got such the files
+Lennix
+just to a buyer here
+in building and expanding
+citizen mazing picture
+no many
+changing files over the placement
+of a really really good picture
+when software gets billed
+that open source
+a way in fact
+the software engineering
+what's not program
+cool but
+right marvelously clustering
+sufferance nearing is is about people
+the software engineering
+engineering the same way that such a you know
+Suffren juniors
+have a constructs offer on this course
+and
+was said the first engineer
+recent fall offices
+I've been around for hundreds of years
+writing software was a clean even ours
+dot dot kind of activity
+almost like reading poetry maybe
+she's should she start to change it
+inspecting the
 
