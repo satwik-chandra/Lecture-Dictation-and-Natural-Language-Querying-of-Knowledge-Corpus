@@ -13,7 +13,7 @@ import video from './r.mp4'
           <div className="Container">
             <h1>Hello World</h1>
             <Button color='blue' text='Button For Emma' resp ='p'/>
-            <SearchBar title='query: ' inputV = 'Sub' value = 't' resp='here'/>
+            <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' hLink = {true}/>
           </div>
         )
       };
@@ -21,10 +21,11 @@ import video from './r.mp4'
   //export default HomePage;
   const LecturePage = () => {
 
+
     return (
       <div className="Container">
         <h1>Lecture Page</h1>
-        <Link to='/'>Back</Link>
+        <Link style={{marginBottom: "20px"}} to='/'>Back</Link>
         <div style={{
           display: 'flex',
           alignItems: 'center',
@@ -32,6 +33,7 @@ import video from './r.mp4'
          }}
         className='player-wrapper'>
             <ReactPlayer
+            style={{marginBottom: "20px",marginTop: "20px"}}
             className='react-player'
             url= {video}
             width='60%'
@@ -40,6 +42,7 @@ import video from './r.mp4'
 
             />
         </div>
+        <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' hLink = {false} />
         
       </div>
     )

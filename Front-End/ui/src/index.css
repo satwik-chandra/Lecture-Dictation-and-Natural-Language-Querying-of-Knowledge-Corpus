@@ -4,6 +4,10 @@ body {
   text-align: center;
 }
 
+.link {
+  text-align: left;
+}
+
 .btn {
   display: inline-block;
   background: #000;
