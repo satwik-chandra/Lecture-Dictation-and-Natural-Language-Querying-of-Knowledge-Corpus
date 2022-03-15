@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import video from './r.mp4'
-
+import Header1 from './Components/Header1.js'
 
   const HomePage = () => {
     return (
@@ -17,6 +17,16 @@ import video from './r.mp4'
           </div>
         )
       };
+ 
+    const Header = () => 
+    {
+        return (
+            <div> 
+              <Header1 />
+            </div>
+        )
+    };
+
     
   //export default HomePage;
   const LecturePage = () => {
@@ -47,5 +57,5 @@ import video from './r.mp4'
       </div>
     )
   };
-  export {LecturePage, HomePage};
+  export {LecturePage, HomePage, Header};
 
