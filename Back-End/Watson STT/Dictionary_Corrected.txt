@@ -1,0 +1,127 @@
+three three oh one two
+and I practice it
+and I teach it
+wanna show that little video that I keep linked up
+it's not by me
+it's by somebody else there is a bit ly link up at the top
+but if I  just start playing it
+an animation
+building Linux
+nodes to the set of to the set of balls there
+we've got sets of files
+Linux
+just to about here I think
+in building Linux
+so this is an amazing picture
+know many
+changing files all over the place
+think it's a really really good picture
+when software gets built
+now open source
+a way that stays good
+so what is software engineering
+well it's not program
+cool at
+right marvelously linked lists
+software engineering is is about people
+software engineers
+engineering in the same way that a you know
+software engineers
+how they can construct software
+umm
+was the first engineer
+recent follow this is
+engineering been around for hundreds of years
+writing software was a kind of an art
+that that kind of activity
+almost like writing poetry maybe
+she's she started to change it
+and umm
+Buzz Aldrin taken by Neil Armstrong
+have landed
+around that
+and incourage you to go look
+essentially if if Margaret Hamilton's 
+approach to software
+haven't been accepted
+they would've crashed
+or they would've aborted
+first example of how where
+uh to deliver
+software engineering sometimes has a reputation
+um but in this course
+and understand the theory
+and absorb that
+if you want to try to define software engineering
+well you can go to wikipedia
+and if you went to wikipedia
+from these gentlemen
+there's a bit ly link again
+software engineering body of knowledge
+SWEBOK project
+have a read of that
+again just to think about it
+software for the the term software
+and that was nineteen sixty nine
+so since sixty eight
+IEEE was already dilevering transactions
+and IEEE transactions
+and and the disciplines
+here's a reasonable definition
+from the SWEBOK work
+I think that
+that's a little I think that's a typo but there you go
+the the last piece
+it'll probably be a bit easier to understand
+quite a lot of maths and so on
+the building in the system
+go about finding if there are bugs in the software
+testing that kind of activity
+really important to scale software development
+get away without doing real software engineering
+you really have to start thinking
+ok so why should you care
+article from the by Marc Andreessen
+and Marc Andreessen
+the techie in that outfit
+but uh here and went on
+and I guess it's about ten years ago
+again link is up there
+software reaches
+going on about covid
+are all built around
+that's not possible without proper software engineering discipline
+the fact that software becomes
+makes it really important that software is built well
+there is another reason
+kind of like blacksmiths really
+only people I can think of who who kinf of do something similar
+I want to give you a simple example and I think this is quite interesting
+this is a picture of a software engineering tool
+softwares eating the world
+it is working out
+what the developer wants to write
+some of the code we write is very unique
+somebody using that code would be
+straight forward personal reason
+how you can use them and if you're going
+source control or unit testing
+all compiler tracing all the rest of them
+part of the toolkit of the software engineer
+well the you're not going
+some in the class who will never program
+systems analysts
+capabilities are
+how three three oh one two is structured
+so this is a recorded session
+brought upon us by covid that we have these recorded sessions
+more often than that not
+live sessions when we can
+conversation around some things
+module is structured are
+technically two lectures
+one lecture to do siri
+to help scafold it
+is a bit unusuall
+so we start very small
+and are tasks that are focused around
