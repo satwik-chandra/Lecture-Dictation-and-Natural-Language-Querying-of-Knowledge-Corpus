@@ -5,11 +5,11 @@ import './index.css';
 import App, { Header1 } from './App';
 import {HomePage, LecturePage, Header} from './App';
 import reportWebVitals from './reportWebVitals';
-//import { Router } from 'express';
+
 
 ReactDOM.render(
   <Router>
-     <Header />
+    <Header />
     <Routes>
       <Route exact path='/' element={<HomePage />}/>
       <Route exact path='/lecture' element={<LecturePage />}/>

@@ -5,8 +5,8 @@ import SearchBar from './Components/SearchBar.js'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
-import video from './r.mp4'
-import Header1 from './Components/Header1.js'
+import video from './videos/r.mp4'
+import Title from './Components/Title.js'
 
   const HomePage = () => {
     return (
@@ -17,15 +17,14 @@ import Header1 from './Components/Header1.js'
           </div>
         )
       };
- 
-    const Header = () => 
-    {
-        return (
-            <div> 
-              <Header1 />
-            </div>
-        )
-    };
+
+  const Header = () => {
+    return (
+      <div className="header">
+        <Title />
+      </div>
+    )
+  }
 
     
   //export default HomePage;
