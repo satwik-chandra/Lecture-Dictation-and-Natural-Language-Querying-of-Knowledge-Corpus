@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState, useEffect} from 'react'
 import Response from './Response.js'
+import mag from '../mag.png'
 
-export const SearchBar = ({title, inputV, value, resp, sLink, hLink}) => {
+export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
 
     const [newValue, setValue] = useState(value)
     const [response, setResponse] = useState(resp)
@@ -18,11 +19,13 @@ export const SearchBar = ({title, inputV, value, resp, sLink, hLink}) => {
    }
 
     const handleChange = (event) => {
+       
         setValue(event.target.value);
     }
 
     const handleSubmit= async (event) => {
         event.preventDefault();
+        setShowLink(false)
         setResponse('');
         const respFromServer = await fetchResp()
         try {
@@ -37,10 +40,9 @@ export const SearchBar = ({title, inputV, value, resp, sLink, hLink}) => {
         <div>
            <form onSubmit={handleSubmit}>
                <label>
-                    {title}
-                    <input type="text" value={newValue} onChange={handleChange}/> 
+                    <input className='searchBar' placeholder= 'query' type="text" value={newValue} onChange={handleChange}/> 
                 </label> 
-                <input type="submit" value={inputV}/>
+                <input className = "mag" type="image" src={mag} alt="Submit" width="12" height="16"/>
             </form>
             <Response key ={"1"} text = {response} showLink = {showLink} hasLink = {hasLink}/>
         </div>

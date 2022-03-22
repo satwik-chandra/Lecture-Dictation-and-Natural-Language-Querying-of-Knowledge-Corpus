@@ -15,13 +15,6 @@ ReactDOM.render(
       <Route exact path='/lecture' element={<LecturePage />}/>
     </Routes>
   </Router>,
-  
-
-   
-
-   //<React.StrictMode>
-   // <App />
-   //</React.StrictMode>,
   document.getElementById('root')
 );
 

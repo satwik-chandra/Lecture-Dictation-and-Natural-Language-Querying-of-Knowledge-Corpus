@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 export const Response = ({text, showLink, hasLink}) => {
     return (
         <div className="response"> 
-            {showLink && <h2 style= {{alignItems:"right"}}>Found in Module X week Y lecture Z: Lecture Name</h2>}
+            {showLink && <h2 >Found in Module X week Y lecture Z: Lecture Name</h2>}
             <p>{text}</p>
-            {hasLink && showLink && <Link to='/lecture'>Go to Lecture</Link>}
+            {hasLink && showLink && <Link className='link' to='/lecture'>Go to Lecture</Link>}
         </div>
     )
 }

@@ -11,9 +11,8 @@ import Title from './Components/Title.js'
   const HomePage = () => {
     return (
           <div className="Container">
-            <h1>Hello World</h1>
             <Button color='blue' text='Button For Emma' resp ='p'/>
-            <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' hLink = {true}/>
+            <SearchBar inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {true}/>
           </div>
         )
       };
@@ -51,8 +50,7 @@ import Title from './Components/Title.js'
 
             />
         </div>
-        <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' hLink = {false} />
-        
+        <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {false} />
       </div>
     )
   };
