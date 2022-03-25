@@ -5,6 +5,7 @@ import mag from '../mag.png'
 
 export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
 
+    const [results, setResults] = useState(null)
     const [newValue, setValue] = useState(value)
     const [response, setResponse] = useState(resp)
     const [showLink, setShowLink] = useState(sLink)

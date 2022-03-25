@@ -2,6 +2,7 @@ import './App.css';
 import Button from './Components/Button.js'
 import Response from './Components/Response.js'
 import SearchBar from './Components/SearchBar.js'
+import Search from './Components/Search.js'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
@@ -11,8 +12,7 @@ import Title from './Components/Title.js'
   const HomePage = () => {
     return (
           <div className="Container">
-            <Button color='blue' text='Button For Emma' resp ='p'/>
-            <SearchBar inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {true}/>
+            <Search />
           </div>
         )
       };
@@ -33,7 +33,7 @@ import Title from './Components/Title.js'
     return (
       <div className="Container">
         <h1>Lecture Page</h1>
-        <Link style={{marginBottom: "20px"}} to='/'>Back</Link>
+        <Link className='link' style={{alignSelf: "left", marginBottom: "20px"}} to='/'>Back</Link>
         <div style={{
           display: 'flex',
           alignItems: 'center',
@@ -47,7 +47,6 @@ import Title from './Components/Title.js'
             width='60%'
             height='60%'
             controls = {true}
-
             />
         </div>
         <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {false} />

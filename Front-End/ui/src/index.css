@@ -55,8 +55,12 @@ body {
   width: 11%;
 }
 
-.link {
+.link1 {
   text-align: right;
+}
+
+.link2 {
+  text-align: left;
 }
 
 .searchBar {
@@ -66,4 +70,14 @@ body {
 
 .mag {
   margin-left: -20px;
+}
+
+.brace {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
