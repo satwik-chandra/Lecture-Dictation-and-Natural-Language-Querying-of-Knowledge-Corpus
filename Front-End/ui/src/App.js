@@ -7,12 +7,16 @@ import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import video from './r.mp4'
 import Header1 from './Components/Header1.js'
+// import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
   const HomePage = () => {
+    
     return (
           <div className="Container">
             <h1>Hello World</h1>
-            <Button color='blue' text='Button For Emma' resp ='p'/>
+            <Button color='blue' text='School1' resp ='p'/>
+            <Button color='blue' text='School2' resp ='p'/>
+            <Button color='blue' text='School3' resp ='p'/>
             <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' hLink = {true}/>
           </div>
         )
