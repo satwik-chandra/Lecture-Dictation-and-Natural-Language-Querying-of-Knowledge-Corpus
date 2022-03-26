@@ -1,3 +1,6 @@
+#sample usage
+#processing.py transcript.json LectureName Link.com ouput.json <int seconds offset ie. 0>
+
 import json 
 import sys
 
@@ -27,6 +30,7 @@ with open (args[1], 'r') as f:
         transcriptString+=('\n[' +minFill+ str(minutes)+':'+ secFill+str(seconds)+']' + transcript)
 
 transcriptString=transcriptString.replace('%HESITATION', '')
+transcriptString=transcriptString.replace('  ', ' ')
     
 dictionary = { 
               "Header" : args[2],
