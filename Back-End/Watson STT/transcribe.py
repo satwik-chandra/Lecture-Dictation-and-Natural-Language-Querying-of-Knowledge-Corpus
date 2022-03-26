@@ -6,9 +6,16 @@ from ibm_watson.websocket import RecognizeCallback, AudioSource
 from dotenv import load_dotenv
 load_dotenv()
 import os
+import sys
+
+from typing import List
+
+args: List[str] = sys.argv
+
 
 url = os.getenv('URL')
 key = os.getenv('KEY')
+model = os.getenv('MODEL')
 ##########
 # IBM CLOUD: Use the following code only to
 # authenticate to IBM Cloud.
@@ -54,15 +61,15 @@ class MyRecognizeCallback(RecognizeCallback):
 
 myRecognizeCallback = MyRecognizeCallback()
 
-with open(join(dirname(__file__), './.', 'GithubAPIPython5Mins.flac'),
+with open(join(dirname(__file__), './.', args[1]),
               'rb') as audio_file:
     audio_source = AudioSource(audio_file)
     speech_to_text.recognize_using_websocket(
         audio=audio_source,
         content_type='audio/flac',
         recognize_callback=myRecognizeCallback,
-        model='en-US_BroadbandModel',
-        language_customization_id='22dafce9-7d1d-47f1-8cb3-b106e7f2ea7b',
+        model='en-GB_Multimedia',
+        language_customization_id=model,
         customization_weight=0.3,
         timestamps=True,
         end_of_phrase_silence_time=100
