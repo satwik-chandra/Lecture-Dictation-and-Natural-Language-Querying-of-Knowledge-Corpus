@@ -14,7 +14,7 @@ export const Search = () => {
                 <Button color='blue' text='Stephen' resp ='p'/>
                 <Button color='blue' text='Saif' resp ='p'/>
             </div>
-            <SearchBar inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {true}/>
+            <SearchBar num = {3} inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {true}/>
         </div>
     )
 }

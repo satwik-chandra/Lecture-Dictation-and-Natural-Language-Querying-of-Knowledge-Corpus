@@ -5,17 +5,18 @@ import mag from '../mag.png'
 
 export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
 
-    const [results, setResults] = useState(null)
     const [newValue, setValue] = useState(value)
     const [response, setResponse] = useState(resp)
     const [showLink, setShowLink] = useState(sLink)
     const [hasLink, setHasLink] = useState(hLink)
+    const [allResults, setAllResults] = useState(Array())
+    const [numLoaded, setNumLoaded] = useState(0)
  
    const fetchResp = async () => {
        const res = await fetch('http://localhost:3001/api/discovery/query/'+newValue)
-       console.log('http://localhost:3001/api/discovery/query/'+newValue)
+       //console.log('http://localhost:3001/api/discovery/query/'+newValue)
        const data = await res.json()
-       console.log(data)
+       //console.log(data)
        return data
    }
 
@@ -24,11 +25,26 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
         setValue(event.target.value);
     }
 
+    useEffect(() => {
+        console.log(allResults)
+    }, [allResults]);
+
     const handleSubmit= async (event) => {
         event.preventDefault();
         setShowLink(false)
         setResponse('');
         const respFromServer = await fetchResp()
+        console.log(respFromServer)
+        const results = respFromServer['result']['results']
+        for (let i = 0; i < results.length; i++) {
+            try {
+                results.push(respFromServer['result']['results'][i]['text'])
+                console.log(results.at(i))
+            } catch(err) {
+                break
+            }
+          }
+        setAllResults(results)
         try {
             setResponse(respFromServer['result']['results'][0]['text']);
             setShowLink(true)
@@ -45,7 +61,12 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
                 </label> 
                 <input className = "mag" type="image" src={mag} alt="Submit" width="12" height="16"/>
             </form>
-            <Response key ={"1"} text = {response} showLink = {showLink} hasLink = {hasLink}/>
+            <>
+                {allResults.map((res, i) => (
+                    <Response key ={i} text = {response} showLink = {showLink} hasLink = {hasLink}/>
+                ))}
+            </>
+            
         </div>
     )
 }
