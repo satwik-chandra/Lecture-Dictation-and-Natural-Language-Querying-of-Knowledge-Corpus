@@ -26,21 +26,27 @@ def divide_transcript(json_file):
         # convert the lis ttrancript_list into a dictionary where the key of each entry is the timestamp at the start of each index in transcript_list and the value is the rest of the text in the transcript_list element
         transcript_dict = {}
         for i in range(len(transcript_list)):
-            transcript_dict[transcript_list[i][1:6]] = transcript_list[i][7:]
-
+            # the key values are timestamps
+            if i>0:
+                transcript_dict[transcript_list[i][1:6]] = transcript_list[i][7:]
+            
+        timestamp_list = list(transcript_dict.keys())
+        
+        text_list = list(transcript_dict.values())
         # for each element in transcript_list
-        for element in transcript_list:
+        for i in range(len(timestamp_list)):
             # create a new json file
-            new_json_file = json_file.replace('.json', '_edited.json')
-            # create a new json file
+            new_json_file = json_file.replace('.json', f"_edited{i}.json")
+                # create a new json file
             with open(new_json_file, 'w') as f:
                 # create a dictionary
                 new_data = {}
                 # add the header, link and transcript to the dictionary
                 new_data['Header'] = header
                 new_data['Link'] = link
-                new_data['Transcript'] = transcript_dict
-                # write the dictionary to the json file
+                new_data['TIME_STAMP'] = timestamp_list[i]
+                new_data['TEXT'] = text_list[i]
+                    # write the dictionary to the json file
                 json.dump(new_data, f)
     return new_json_file
 
@@ -49,13 +55,13 @@ def divide_transcript(json_file):
 
 def main():
 
-    list_of_transcripts = ["C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture1IntroductionA.json",
-                            "C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture2BuildingaToolChain.json",
-                            "C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture_3_LCA_default.json",
-                           "C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture2BuildingaToolChain.json",
-                           "C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture6UnitTesting.json",
-                           "C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture7AgileDevelopmentA.json",
-                           "C:\\Users\\Satwik Chandra\\Desktop\\Transcripts\\Lecture7AgileDevelopmentB.json"]
+    list_of_transcripts = ["D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture_3_LCA_default.json",
+    "D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture1IntroductionA.json",
+    "D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture1IntroductionB.json",
+    "D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture2BuildingaToolChain.json",
+    "D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture6UnitTesting.json",
+    "D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture7AgileDevelopmentA.json",
+    "D:\\Visual Studio Projects\\Lecture-Dictation-and-Natural-Language-Querying-of-Knowledge-Corpus\\Edited Transcripts\\Lecture7AgileDevelopmentB.json"]
 
     for transcript in list_of_transcripts:
         json_file = transcript
