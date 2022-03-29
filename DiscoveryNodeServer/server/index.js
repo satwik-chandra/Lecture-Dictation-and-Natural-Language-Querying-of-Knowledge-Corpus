@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const projectID = '0a77a092-4243-4c59-a8fb-0bf9cd0a6678'; 
+const projectID = '09bc2bfb-2a8e-4795-9337-3c372422c40e'; 
 
 const DiscoveryV2 = require('ibm-watson/discovery/v2');
 const { IamAuthenticator } = require('ibm-watson/auth');
