@@ -84,7 +84,7 @@ for index in range(len(list_of_queries)):
         counter = 0
 
         for item in text_list:
-            if(item[0].find(keyword) != -1):
+            if((item[0].find(keyword) != -1) or (item[0].find(keyword.lower()) != -1)):
                 counter += 1
             
 

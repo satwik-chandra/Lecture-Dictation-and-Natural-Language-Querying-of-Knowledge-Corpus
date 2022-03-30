@@ -1,1 +1,1 @@
-Date: 2022-03-30     Mean accuracy: 28.655462184873947
+Date: 2022-03-30     Mean accuracy: 43.27731092436975
