@@ -6,13 +6,28 @@ import Search from './Components/Search.js'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
+<<<<<<< HEAD
 import video from './videos/r.mp4'
 import Title from './Components/Title.js'
+=======
+import video from './r.mp4'
+import Header1 from './Components/Header1.js'
+// import { TouchableOpacity, Text, StyleSheet } from "react-native";
+>>>>>>> main
 
   const HomePage = () => {
+    
     return (
           <div className="Container">
+<<<<<<< HEAD
             <Search />
+=======
+            <h1>Hello World</h1>
+            <Button color='blue' text='School1' resp ='p'/>
+            <Button color='blue' text='School2' resp ='p'/>
+            <Button color='blue' text='School3' resp ='p'/>
+            <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' hLink = {true}/>
+>>>>>>> main
           </div>
         )
       };
