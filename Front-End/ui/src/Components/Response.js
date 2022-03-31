@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Response = ({text, showLink, hasLink}) => {
+export const Response = ({keyword, text, showLink, hasLink}) => {
     return (
         <div className="response"> 
             {showLink && <h2 >Found in Module X week Y lecture Z: Lecture Name</h2>}

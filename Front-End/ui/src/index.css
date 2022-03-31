@@ -1,17 +1,21 @@
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman',Georgia,Serif;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #fbfbf8;
+  color: black;
+  line-height: 140%;
+  letter-spacing: 0px;
+  word-spacing: 3px;
 }
 
 .link {
-  text-align: left;
+  text-align: right !important;
 }
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: #0e73b8;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -26,7 +30,7 @@ body {
 .header {
   text-align: right;
   padding: 0px;
-  position: sticky;
+  margin: -8px;
   top: 0;
   background: #0e73b8;
 }
@@ -37,6 +41,8 @@ body {
   padding: 40px;
   padding-left: 100px;
   padding-right: 100px;
+  outline: black solid 1px;
+  outline-offset: -30px
 }
 
 .title {
@@ -46,7 +52,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -65,11 +71,12 @@ body {
 
 .searchBar {
   width: 50%;
-  height: 20px;
+  height: 40px;
 }
 
 .mag {
-  margin-left: -20px;
+  margin-left: -30px;
+  margin-top: -20px;
 }
 
 .brace {
@@ -80,4 +87,8 @@ body {
   align-items: center;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.searchBar::placeholder {
+  font-size: 20px;
 }

@@ -41,7 +41,7 @@ import Title from './Components/Title.js'
          }}
         className='player-wrapper'>
             <ReactPlayer
-            style={{marginBottom: "20px",marginTop: "20px"}}
+            style={{marginBottom: "20px",marginTop: "20px", border: "50px, solid, black"}}
             className='react-player'
             url= {video}
             width='60%'

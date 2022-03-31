@@ -57,13 +57,13 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
         <div>
            <form onSubmit={handleSubmit}>
                <label>
-                    <input className='searchBar' placeholder= 'query' type="text" value={newValue} onChange={handleChange}/> 
+                    <input className='searchBar' placeholder= ' Search...' type="text" value={newValue} onChange={handleChange}/> 
                 </label> 
-                <input className = "mag" type="image" src={mag} alt="Submit" width="12" height="16"/>
+                <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
             </form>
             <>
                 {allResults.map((res, i) => (
-                    <Response key ={i} text = {response} showLink = {showLink} hasLink = {hasLink}/>
+                    <Response key ={i} keyword= {newValue} text = {response} showLinkp = {showLink} hasLink = {hasLink}/>
                 ))}
             </>
             

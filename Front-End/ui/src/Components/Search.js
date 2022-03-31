@@ -10,9 +10,9 @@ export const Search = () => {
     return (
         <div>
             <div className="brace">
-                <Button color='blue' text='Emma' resp ='p' on/>
-                <Button color='blue' text='Stephen' resp ='p'/>
-                <Button color='blue' text='Saif' resp ='p'/>
+                <Button color='#0e73b8' text='Emma' resp ='p' on/>
+                <Button color='#0e73b8' text='Stephen' resp ='p'/>
+                <Button color='#0e73b8' text='Saif' resp ='p'/>
             </div>
             <SearchBar num = {3} inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {true}/>
         </div>
