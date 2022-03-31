@@ -63,7 +63,7 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
             </form>
             <>
                 {allResults.map((res, i) => (
-                    <Response key ={i} keyword= {newValue} text = {response} showLinkp = {showLink} hasLink = {hasLink}/>
+                    <Response key ={i} keyword= {newValue} text = {response} showLink = {showLink} hasLink = {hasLink}/>
                 ))}
             </>
             
