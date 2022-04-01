@@ -34,21 +34,15 @@ import Title from './Components/Title.js'
     return (
       <div className="Container">
         <h1>Lecture Page</h1>
-        <Link className='link' style={{alignSelf: "left", marginBottom: "20px"}} to='/'>Back</Link>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-         }}
-        className='player-wrapper'>
-            <ReactPlayer
-            style={{marginBottom: "20px",marginTop: "20px", border: "50px, solid, black"}}
-            className='react-player'
-            url= {video}
-            width='60%'
-            height='60%'
-            controls = {true}
-            />
+        <div className='player-wrapper'>
+          <Link className = "back" to='/'>Back</Link>
+          <ReactPlayer
+          className='react-player'
+          url= {video}
+          width='60%'
+          height='60%'
+          controls = {true}
+          />
         </div>
         <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {false} />
       </div>

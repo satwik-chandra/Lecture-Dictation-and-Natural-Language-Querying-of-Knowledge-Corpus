@@ -108,3 +108,24 @@ input[type=text] {
 .workingTitle {
   margin-top: 50px;
 }
+
+.player-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.back {
+  margin-top: 20px;
+  margin-right: 10%;
+}
+
+.react-player {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 12%;
+  display: flex;
+  border:5px solid black
+}
+
