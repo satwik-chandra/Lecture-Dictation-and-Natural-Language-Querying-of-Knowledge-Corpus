@@ -1,11 +1,8 @@
 import React from 'react'
-import { useState} from 'react'
 import Button from './Button.js'
 import SearchBar from './SearchBar.js'
 
 export const Search = () => {
-
-    const [filter, setFilter] = useState('')
 
     return (
         <div>
@@ -14,7 +11,7 @@ export const Search = () => {
                 <Button className='btn'  text='Stephen' resp ='p'/>
                 <Button className='btn'  text='Saif' resp ='p'/>
             </div>
-            <SearchBar num = {3} inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {true}/>
+            <SearchBar num = {3} inputV = 'Sub' value = '' sLink = {false} hLink = {true}/>
         </div>
     )
 }

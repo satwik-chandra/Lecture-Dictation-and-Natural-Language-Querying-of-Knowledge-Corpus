@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App, { Header1 } from './App';
 import {HomePage, LecturePage, Header} from './App';
 import reportWebVitals from './reportWebVitals';
 
