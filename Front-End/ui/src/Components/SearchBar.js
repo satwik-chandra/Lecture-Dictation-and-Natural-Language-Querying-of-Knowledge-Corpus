@@ -57,7 +57,7 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
         <div>
            <form onSubmit={handleSubmit}>
                <label>
-                    <input className='searchBar' placeholder= ' Search...' type="text" value={newValue} onChange={handleChange}/> 
+                    <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
                 </label> 
                 <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
             </form>

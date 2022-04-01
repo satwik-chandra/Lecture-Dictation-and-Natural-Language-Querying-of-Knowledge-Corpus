@@ -90,5 +90,11 @@ body {
 }
 
 .searchBar::placeholder {
+  font-family: 'Times New Roman',Georgia,Serif;
+  font-size: 20px;
+}
+
+input[type=text] {
+  font-family: 'Times New Roman',Georgia,Serif;
   font-size: 20px;
 }
