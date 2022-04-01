@@ -20,12 +20,15 @@ const discovery = new DiscoveryV2({
 
 var queryParams = {
   projectId: projectID,
+  return_ : ["Header", "TEXT", "TIME_STAMP"],
+  count: 10,
+  spelling_suggestions: true,
   naturalLanguageQuery: "",  //this is the query that is passed to the discovery service
 };
 
 var auto_complete_prams = {
   projectId: projectID,
-  count: 7,
+  count: 5,
   prefix: "",  //this is the query that is passed to the discovery service
 };
 
