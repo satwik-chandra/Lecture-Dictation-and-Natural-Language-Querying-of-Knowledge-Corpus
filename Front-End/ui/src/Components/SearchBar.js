@@ -35,22 +35,25 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
         setResponse('');
         const respFromServer = await fetchResp()
         console.log(respFromServer)
-        const results = respFromServer['result']['results']
-        for (let i = 0; i < results.length; i++) {
-            try {
-                results.push(respFromServer['result']['results'][i]['text'])
-                console.log(results.at(i))
-            } catch(err) {
-                break
+        const results = Array()
+        const numResults = respFromServer['result']['matching_results']
+        console.log(numResults)
+        if (numResults === 0){
+            setResponse('Sorry')
+        }
+        else {
+            for (let i = 0; i < numResults; i++) {
+                try {
+                    results.push(respFromServer['result']['results'][i]['TEXT'])
+                    console.log(results.at(i))
+                } catch(err) {
+                    break
+                }
             }
-          }
+        setShowLink(true)
         setAllResults(results)
-        try {
-            setResponse(respFromServer['result']['results'][0]['text']);
-            setShowLink(true)
-        }catch(err) {
-            setResponse('Sorry! No results found :(');
-          }
+        }
+        
     }
 
     return (
@@ -63,7 +66,7 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
             </form>
             <>
                 {allResults.map((res, i) => (
-                    <Response key ={i} keyword= {newValue} text = {response} showLink = {showLink} hasLink = {hasLink}/>
+                    <Response key ={i} keyword= {newValue} text = {res} showLink = {showLink} hasLink = {hasLink}/>
                 ))}
             </>
             

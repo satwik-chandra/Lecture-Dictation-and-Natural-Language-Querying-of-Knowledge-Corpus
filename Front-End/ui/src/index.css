@@ -39,11 +39,13 @@ body {
 .response {
   text-align: justify;
   text-justify: inter-word;
-  padding: 40px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 70px;
   outline: black solid 1px;
-  outline-offset: -30px
+  background-color: lightblue;
+
 }
 
 .link {
