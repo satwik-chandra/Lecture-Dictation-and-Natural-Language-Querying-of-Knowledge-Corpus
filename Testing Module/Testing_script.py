@@ -19,42 +19,8 @@ discovery = DiscoveryV2(
 )
 
 discovery.set_service_url(DISCOVERY_URL)
-
-list_of_queries = ["What is software engineering?",
-                   "Who is Margaret Hamilton?",
-                   "Is software seen as an industrial process?",
-                   "Did Margaret Hamilton help in the moon landing?",
-                   "What is the sweetback project?",
-                   "What is software?",
-                   "Did Mark Andriessen create netscape?",
-                   "Do software engineers build their own tools?",
-                   "Is there an exam in this module",
-                   "What is agile development?",
-                   "What is the textbook for this module?",
-                   "What is Git?",
-                   "Which IDE should I use?",
-                   "Is VIM a good editor?",
-                   "If I am on Mac, should I use Xcode?",
-                   "Did programming in C exist in 1986?",
-                   "Will these high level languages be replaced in the next few years?"]
-
-list_of_keywords = ["software engineering",
-                    "Margaret Hamilton",
-                    "industrial",
-                    "moon landing",
-                    "sweetback project",
-                    "software",
-                    "netscape",
-                    "engineers",
-                    "exam",
-                    "agile",
-                    "textbook",
-                    "Git",
-                    "IDE",
-                    "VIM",
-                    "Mac",
-                    "1986",
-                    "high level languages"]
+###############################################################################################################################
+#FOR OMAID PART 1
 
 
 ############################################################################################################################################################
@@ -98,10 +64,10 @@ for index in range(len(list_of_queries)):
     except ApiException as ex:
         print("Method failed with status code " + str(ex.code) + ": " + ex.message)
         
+###############################################################################################################################################################3
+#FOR OMAID PART 2
 
-mean_accuracy = sum(list_of_accuracies)/len(list_of_accuracies)
-print("Mean accuracy: " + str(mean_accuracy))
-
-with open("AccuracyLOG.txt",'w',encoding = 'utf-8') as f:
-   f.write("Date: "+str(date.today())+ "     "  + "Mean accuracy: " + str(mean_accuracy) + "\n")
+    
+###############################################################################################################################################################
+    
    
