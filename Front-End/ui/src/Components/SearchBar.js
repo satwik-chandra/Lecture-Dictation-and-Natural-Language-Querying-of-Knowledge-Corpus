@@ -59,23 +59,36 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
         
     }
 
-    return (
-        <div>
-           <form onSubmit={handleSubmit}>
-               <label>
-                    <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
-                </label> 
-                <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
-            </form>
-            <>
-                <p>{phBool && response}</p>
-                {allResults.map((res, i) => (
-                    <Response key ={i} keyword= {newValue} text = {res} showLink = {showLink} hasLink = {hasLink}/>
-                ))}
-            </>
-            
-        </div>
-    )
+    if(phBool) {
+        return (
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
+                    </label> 
+                    <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
+                </form>
+                    <p className = "responsePlaceHolder">{phBool && response}</p>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
+                    </label> 
+                    <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
+                </form>
+                    {allResults.map((res, i) => (
+                        <Response key ={i} keyword= {newValue} text = {res} showLink = {showLink} hasLink = {hasLink}/>
+                    ))}   
+                <div className="stopShake"/>
+            </div>
+
+        )
+    }
 }
 
 export default SearchBar
