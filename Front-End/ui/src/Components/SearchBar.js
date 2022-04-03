@@ -31,8 +31,8 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
     }, [allResults]);
 
     const handleSubmit= async (event) => {
-        
         event.preventDefault();
+        setAllResults([])
         setShowLink(false)
         setResponse('');
         const respFromServer = await fetchResp()

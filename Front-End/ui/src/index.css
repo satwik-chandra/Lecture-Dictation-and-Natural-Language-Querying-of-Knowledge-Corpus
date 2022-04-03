@@ -45,7 +45,16 @@ body {
   margin: 70px;
   outline: black solid 1px;
   background-color: lightblue;
+  animation: 1.5s ease-in 0s 1 slideUp;
+}
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 .arrow
@@ -137,6 +146,7 @@ input[type=text] {
 
 .workingTitle {
   margin-top: 50px;
+  margin-right: 4%;
 }
 
 .player-wrapper {
