@@ -1,12 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import Response from './Response.js'
-import $ from 'jquery'
+
 
 export const Button = ({color, text}) => {
 
     const onClick = (_e) => {
-        console.log("Button has been pressed");
+        console.log(text," has been pressed");
     }
 
     return (

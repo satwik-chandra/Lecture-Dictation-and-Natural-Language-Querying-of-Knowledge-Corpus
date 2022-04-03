@@ -39,11 +39,13 @@ body {
 .response {
   text-align: justify;
   text-justify: inter-word;
-  padding: 40px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 70px;
   outline: black solid 1px;
-  outline-offset: -30px
+  background-color: lightblue;
+
 }
 
 .arrow
@@ -80,7 +82,7 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .logo {
@@ -117,5 +119,42 @@ body {
 }
 
 .searchBar::placeholder {
+  font-family: 'Times New Roman',Georgia,Serif;
   font-size: 20px;
 }
+
+input[type=text] {
+  font-family: 'Times New Roman',Georgia,Serif;
+  font-size: 20px;
+}
+
+.copyright {
+  margin-top: -1px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.workingTitle {
+  margin-top: 50px;
+}
+
+.player-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.back {
+  margin-top: 20px;
+  margin-right: 10%;
+}
+
+.react-player {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 12%;
+  display: flex;
+  border:5px solid black
+}
+

@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const projectID = '2507e3f4-9e97-4e0c-a9c1-2bf1cd2ae471'; 
+const projectID = '09bc2bfb-2a8e-4795-9337-3c372422c40e'; 
 
 const DiscoveryV2 = require('ibm-watson/discovery/v2');
 const { IamAuthenticator } = require('ibm-watson/auth');
@@ -20,12 +20,15 @@ const discovery = new DiscoveryV2({
 
 var queryParams = {
   projectId: projectID,
+  return_ : ["Header", "TEXT", "TIME_STAMP"],
+  count: 10,
+  spelling_suggestions: true,
   naturalLanguageQuery: "",  //this is the query that is passed to the discovery service
 };
 
 var auto_complete_prams = {
   projectId: projectID,
-  count: 7,
+  count: 5,
   prefix: "",  //this is the query that is passed to the discovery service
 };
 

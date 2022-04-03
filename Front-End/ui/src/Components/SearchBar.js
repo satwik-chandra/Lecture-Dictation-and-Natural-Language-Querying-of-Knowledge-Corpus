@@ -3,10 +3,11 @@ import { useState, useEffect} from 'react'
 import Response from './Response.js'
 import mag from '../mag.png'
 
-export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
+export const SearchBar = ({inputV, value, sLink, hLink}) => {
 
     const [newValue, setValue] = useState(value)
-    const [response, setResponse] = useState(resp)
+    const [response, setResponse] = useState('Your Answers go here')
+    const [phBool, setPHbool] = useState(true)
     const [showLink, setShowLink] = useState(sLink)
     const [hasLink, setHasLink] = useState(hLink)
     const [allResults, setAllResults] = useState(Array())
@@ -30,40 +31,46 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
     }, [allResults]);
 
     const handleSubmit= async (event) => {
+        
         event.preventDefault();
         setShowLink(false)
         setResponse('');
         const respFromServer = await fetchResp()
         console.log(respFromServer)
-        const results = respFromServer['result']['results']
-        for (let i = 0; i < results.length; i++) {
-            try {
-                results.push(respFromServer['result']['results'][i]['text'])
-                console.log(results.at(i))
-            } catch(err) {
-                break
+        const results = []
+        const numResults = respFromServer['result']['matching_results']
+        console.log(numResults)
+        if (numResults == 0){
+            setResponse('Sorry')
+        }
+        else {
+            for (let i = 0; i < numResults; i++) {
+                try {
+                    setPHbool(false)
+                    results.push(respFromServer['result']['results'][i]['TEXT'])
+                    console.log(results.at(i))
+                } catch(err) {
+                    break
+                }
             }
-          }
+        setShowLink(true)
         setAllResults(results)
-        try {
-            setResponse(respFromServer['result']['results'][0]['text']);
-            setShowLink(true)
-        }catch(err) {
-            setResponse('Sorry! No results found :(');
-          }
+        }
+        
     }
 
     return (
         <div>
            <form onSubmit={handleSubmit}>
                <label>
-                    <input className='searchBar' placeholder= ' Search...' type="text" value={newValue} onChange={handleChange}/> 
+                    <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
                 </label> 
                 <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
             </form>
             <>
+                <p>{phBool && response}</p>
                 {allResults.map((res, i) => (
-                    <Response key ={i} keyword= {newValue} text = {response} showLink = {showLink} hasLink = {hasLink}/>
+                    <Response key ={i} keyword= {newValue} text = {res} showLink = {showLink} hasLink = {hasLink}/>
                 ))}
             </>
             

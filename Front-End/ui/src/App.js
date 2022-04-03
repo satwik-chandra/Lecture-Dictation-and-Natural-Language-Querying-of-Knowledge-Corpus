@@ -1,10 +1,7 @@
 import './App.css';
-import Button from './Components/Button.js'
-import Response from './Components/Response.js'
 import SearchBar from './Components/SearchBar.js'
 import Search from './Components/Search.js'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import video from './videos/r.mp4'
 import Title from './Components/Title.js'
@@ -12,6 +9,7 @@ import arrow from './arrowLeft.png'
 
 
   const HomePage = () => {
+    
     return (
           <div className="Container">
             <Search />
@@ -53,7 +51,7 @@ import arrow from './arrowLeft.png'
             controls = {true}
             />
         </div>
-        <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {false} />
+        <SearchBar title='query: ' inputV = 'Sub' value = '' sLink = {false} hLink = {false} />
       </div>
     )
   };
