@@ -51,6 +51,7 @@ body {
 .arrow
 {
   float: left;  
+  margin-left: 8%;
 }
 
 .lecLink
@@ -147,13 +148,13 @@ input[type=text] {
 
 .back {
   margin-top: 20px;
-  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .react-player {
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-right: 12%;
+  margin-right: 13%;
   display: flex;
   border:5px solid black
 }

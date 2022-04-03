@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import video from './videos/r.mp4'
 import Title from './Components/Title.js'
-import arrow from './arrowLeft.png'
+import arrow from './images/arrowLeft.png'
 
 
   const HomePage = () => {
