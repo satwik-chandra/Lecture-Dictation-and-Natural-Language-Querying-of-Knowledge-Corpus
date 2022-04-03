@@ -104,13 +104,11 @@ for index in range(len(list_of_queries)):
 
 total_accuracies = 0
 
-for x in list_of_accuracies:
-    if x != 0:
-        total_accuracies += 1
-
-
-mean_accuracy = sum(list_of_accuracies)/total_accuracies
+list_of_accuracies.sort()
+max_accuracies = list_of_accuracies[-8:]
+mean_accuracy = sum(max_accuracies)/len(max_accuracies)
 print("Mean accuracy: " + str(mean_accuracy))
+
 
 with open("AccuracyLOG.txt",'r+',encoding = 'utf-8') as f:
     #got to the end of the file 
