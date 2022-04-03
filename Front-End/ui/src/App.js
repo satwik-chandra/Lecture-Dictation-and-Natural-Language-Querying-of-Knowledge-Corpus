@@ -8,6 +8,8 @@ import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import video from './videos/r.mp4'
 import Title from './Components/Title.js'
+import arrow from './arrowLeft.png'
+
 
   const HomePage = () => {
     return (
@@ -33,7 +35,9 @@ import Title from './Components/Title.js'
     return (
       <div className="Container">
         <h1>Lecture Page</h1>
-        <Link className='link' style={{alignSelf: "left", marginBottom: "20px"}} to='/'>Back</Link>
+        <Link className='backLink' to='/'>
+        <input className = "arrow" type="image" src={arrow} alt="Submit" width="60" height="60"/> 
+        </Link>
         <div style={{
           display: 'flex',
           alignItems: 'center',
