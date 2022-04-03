@@ -48,11 +48,33 @@ body {
 
 }
 
-.link {
-  text-align: right !important;
+.arrow
+{
+  float: left;  
 }
 
-.title {
+.lecLink
+{
+  text-align: left !important;
+  background-color: #0e73b8;
+  color: white;
+  margin-left: auto;
+  width: 5%;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+} 
+
+.lecLink:hover
+{
+  transform: scale(1.5);
+  background: black;
+}
+
+.title 
+{
   text-align: center;
   color: white;
   font-family: Quicksand;

@@ -10,8 +10,9 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
     const [phBool, setPHbool] = useState(true)
     const [showLink, setShowLink] = useState(sLink)
     const [hasLink, setHasLink] = useState(hLink)
-    const [allResults, setAllResults] = useState([])
- 
+    const [allResults, setAllResults] = useState(Array())
+    const [numLoaded, setNumLoaded] = useState(0)
+
    const fetchResp = async () => {
        const res = await fetch('http://localhost:3001/api/discovery/query/'+newValue)
        //console.log('http://localhost:3001/api/discovery/query/'+newValue)
