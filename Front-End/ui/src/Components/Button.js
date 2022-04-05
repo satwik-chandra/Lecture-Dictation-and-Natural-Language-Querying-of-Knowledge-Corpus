@@ -1,7 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import Response from './Response.js'
-import $ from 'jquery'
+
 
 export const Button = ({color, text}) => {
 

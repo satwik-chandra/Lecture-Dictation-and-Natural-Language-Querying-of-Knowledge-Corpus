@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App, { Header1 } from './App';
-import {HomePage, LecturePage, Header} from './App';
+import {DAG, Agile, LCA, HomePage, Header} from './App';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -12,8 +11,11 @@ ReactDOM.render(
     <Header />
     <Routes>
       <Route exact path='/' element={<HomePage />}/>
-      <Route exact path='/lecture' element={<LecturePage />}/>
+      <Route exact path='/lectures/Lecture1IntroductionA' element={<DAG />}/>
+      <Route exact path='/lectures/Lecture7AgileDevelopment' element={<Agile />}/>
+      <Route exact path='/lectures/Lecture1IntroductionB' element={<LCA />}/>
     </Routes>
+    
   </Router>,
   document.getElementById('root')
 );

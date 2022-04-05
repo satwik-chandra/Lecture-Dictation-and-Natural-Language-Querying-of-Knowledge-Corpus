@@ -3,20 +3,18 @@ import { useState, useEffect} from 'react'
 import Response from './Response.js'
 import mag from '../mag.png'
 
-export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
+export const SearchBar = ({lectureFilter, value, sLink, hLink}) => {
 
     const [newValue, setValue] = useState(value)
-    const [response, setResponse] = useState(resp)
+    const [response, setResponse] = useState('Your Answers go here')
+    const [phBool, setPHbool] = useState(true)
     const [showLink, setShowLink] = useState(sLink)
     const [hasLink, setHasLink] = useState(hLink)
     const [allResults, setAllResults] = useState(Array())
-    const [numLoaded, setNumLoaded] = useState(0)
- 
+
    const fetchResp = async () => {
        const res = await fetch('http://localhost:3001/api/discovery/query/'+newValue)
-       //console.log('http://localhost:3001/api/discovery/query/'+newValue)
        const data = await res.json()
-       //console.log(data)
        return data
    }
 
@@ -27,48 +25,90 @@ export const SearchBar = ({inputV, value, resp, sLink, hLink}) => {
 
     useEffect(() => {
         console.log(allResults)
+        console.log(allResults.size)
     }, [allResults]);
 
     const handleSubmit= async (event) => {
         event.preventDefault();
+        setAllResults([])
         setShowLink(false)
         setResponse('');
         const respFromServer = await fetchResp()
         console.log(respFromServer)
-        const results = respFromServer['result']['results']
-        for (let i = 0; i < results.length; i++) {
-            try {
-                results.push(respFromServer['result']['results'][i]['text'])
-                console.log(results.at(i))
-            } catch(err) {
-                break
+        const results = []
+        const numResults = respFromServer['result']['matching_results']
+        console.log(numResults)
+        if (numResults == 0){
+            setResponse('Sorry')
+        }
+        else {
+            
+            if(lectureFilter ==='n') {
+                for (let i = 0; i < numResults; i++) {
+                    try { 
+                        setPHbool(false)
+                        results.push([respFromServer['result']['results'][i]['TEXT'],
+                                    respFromServer['result']['results'][i]['TIME_STAMP'],
+                                    respFromServer['result']['results'][i]['Header']])
+                    } catch(err) {
+                        console.log("you've broken")
+                        break
+                    }
+                }
             }
-          }
+            else {
+                for (let i = 0; i < numResults; i++) {
+                    try { 
+                        setPHbool(false)
+                        if(respFromServer['result']['results'][i]['Header'] == lectureFilter) {
+                            results.push([respFromServer['result']['results'][i]['TEXT'],
+                            respFromServer['result']['results'][i]['TIME_STAMP'],
+                            respFromServer['result']['results'][i]['Header']])
+                        }
+                    } catch(err) {
+                        console.log("you've broken")
+                        break
+                    }
+                }
+            }
+        setShowLink(true)
         setAllResults(results)
-        try {
-            setResponse(respFromServer['result']['results'][0]['text']);
-            setShowLink(true)
-        }catch(err) {
-            setResponse('Sorry! No results found :(');
-          }
+        }
+        
     }
 
-    return (
-        <div>
-           <form onSubmit={handleSubmit}>
-               <label>
-                    <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
-                </label> 
-                <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
-            </form>
-            <>
+    if(phBool) {
+        return (
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
+                    </label> 
+                    <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
+                </form>
+                    <p className = "responsePlaceHolder">{phBool && response}</p>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
+                    </label> 
+                    <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
+                </form>
+
                 {allResults.map((res, i) => (
-                    <Response key ={i} keyword= {newValue} text = {response} showLink = {showLink} hasLink = {hasLink}/>
-                ))}
-            </>
-            
-        </div>
-    )
+                    <Response key ={i} lectureName={res[2]} timeStamp={res[1]} keyword= {newValue} text = {res[0]} showLink = {showLink} hasLink = {hasLink}/>
+                ))} 
+  
+                <div className="stopShake"/>
+            </div>
+
+        )
+    }
 }
 
 export default SearchBar

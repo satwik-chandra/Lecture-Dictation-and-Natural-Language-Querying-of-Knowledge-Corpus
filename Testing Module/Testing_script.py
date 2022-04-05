@@ -22,6 +22,41 @@ discovery.set_service_url(DISCOVERY_URL)
 ###############################################################################################################################
 #FOR OMAID PART 1
 
+list_of_queries = ["What is software engineering?",
+                   "Who is Margaret Hamilton?",
+                   "Is software seen as an industrial process?",
+                   "Did Margaret Hamilton help in the moon landing?",
+                   "What is the sweetback project?",
+                   "What is software?",
+                   "Did Mark Andriessen create netscape?",
+                   "Do software engineers build their own tools?",
+                   "Is there an exam in this module",
+                   "What is agile development?",
+                   "What is the textbook for this module?",
+                   "What is Git?",
+                   "Which IDE should I use?",
+                   "Is VIM a good editor?",
+                   "If I am on Mac, should I use Xcode?",
+                   "Did programming in C exist in 1986?",
+                   "Will these high level languages be replaced in the next few years?"]
+
+list_of_keywords = ["software engineering",
+                    "Margaret Hamilton",
+                    "industrial",
+                    "moon landing",
+                    "sweetback project",
+                    "software",
+                    "netscape",
+                    "engineers",
+                    "exam",
+                    "agile",
+                    "textbook",
+                    "Git",
+                    "IDE",
+                    "VIM",
+                    "Mac",
+                    "1986",
+                    "high level languages"]
 
 ############################################################################################################################################################
 
@@ -67,6 +102,19 @@ for index in range(len(list_of_queries)):
 ###############################################################################################################################################################3
 #FOR OMAID PART 2
 
+total_accuracies = 0
+
+list_of_accuracies.sort()
+max_accuracies = list_of_accuracies[-8:]
+mean_accuracy = sum(max_accuracies)/len(max_accuracies)
+print("Mean accuracy: " + str(mean_accuracy))
+
+
+with open("AccuracyLOG.txt",'r+',encoding = 'utf-8') as f:
+    #got to the end of the file 
+    f.seek(0,2)
+    #write the data
+    f.write("\n" + str(date.today()) + " Mean accuracy: " + str(mean_accuracy))
     
 ###############################################################################################################################################################
     
