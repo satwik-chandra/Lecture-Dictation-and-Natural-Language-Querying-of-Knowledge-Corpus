@@ -10,8 +10,7 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
     const [phBool, setPHbool] = useState(true)
     const [showLink, setShowLink] = useState(sLink)
     const [hasLink, setHasLink] = useState(hLink)
-    const [allResults, setAllResults] = useState(Array())
-    const [numLoaded, setNumLoaded] = useState(0)
+    const [allResults, setAllResults] = useState(new Map())
 
    const fetchResp = async () => {
        const res = await fetch('http://localhost:3001/api/discovery/query/'+newValue)
@@ -28,6 +27,7 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
 
     useEffect(() => {
         console.log(allResults)
+        console.log(allResults.size)
     }, [allResults]);
 
     const handleSubmit= async (event) => {
@@ -37,19 +37,21 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
         setResponse('');
         const respFromServer = await fetchResp()
         console.log(respFromServer)
-        const results = []
+        const results = new Map()
         const numResults = respFromServer['result']['matching_results']
         console.log(numResults)
         if (numResults == 0){
             setResponse('Sorry')
         }
         else {
+            
             for (let i = 0; i < numResults; i++) {
-                try {
+                try { 
                     setPHbool(false)
-                    results.push(respFromServer['result']['results'][i]['TEXT'])
-                    console.log(results.at(i))
+                    results.set(respFromServer['result']['results'][i]['TEXT'],
+                               respFromServer['result']['results'][i]['TIME_STAMP'])
                 } catch(err) {
+                    console.log("you've broken")
                     break
                 }
             }
@@ -81,9 +83,11 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
                     </label> 
                     <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
                 </form>
-                    {allResults.map((res, i) => (
-                        <Response key ={i} keyword= {newValue} text = {res} showLink = {showLink} hasLink = {hasLink}/>
-                    ))}   
+
+                    {Array.from( allResults ).map(([key, value], i) =>
+                        <Response key ={i} timeStamp = {value} keyword= {newValue} text = {key} showLink = {showLink} hasLink = {hasLink}/>
+                    )} 
+  
                 <div className="stopShake"/>
             </div>
 

@@ -48,7 +48,7 @@ body {
   margin: 70px;
   outline: black solid 0px;
   background-color: white;
-  animation: 1.5s ease-in 0s 1 slideUp;
+  animation: 1.2s ease-in 0s 1 slideUp;
 }
 
 
@@ -80,6 +80,11 @@ body {
   font-size: 15px;
   font-family: inherit;
 } 
+
+.link3 {
+  text-decoration: none;
+  color: white
+}
 
 .lecLink:hover
 {
@@ -179,5 +184,13 @@ input[type=text] {
   margin-right: 13%;
   display: flex;
   border:5px solid black
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  justify-content: space-between;
 }
 
