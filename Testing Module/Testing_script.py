@@ -105,7 +105,7 @@ for index in range(len(list_of_queries)):
 total_accuracies = 0
 
 list_of_accuracies.sort()
-max_accuracies = list_of_accuracies[-8:]
+max_accuracies = list_of_accuracies[-10:]
 mean_accuracy = sum(max_accuracies)/len(max_accuracies)
 print("Mean accuracy: " + str(mean_accuracy))
 
