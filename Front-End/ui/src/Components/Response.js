@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Response = ({timeStamp, keyword, text, showLink, hasLink}) => {
+export const Response = ({lectureName, timeStamp, keyword, text, showLink, hasLink}) => {
 
     if(hasLink && showLink) {
         return (
             <div className="response">
-                {showLink && <h2>Found in Module X week Y lecture Z: Lecture Name</h2>}
+                {showLink && <h2>{lectureName}</h2>}
                 <div className='cardInfo'>
                     <p>{'Time Stamp: "'+timeStamp+'"'}</p>
                     <div className="lecLink">
-                        {hasLink && showLink && <Link className= 'link3' to='/lecture'>Lecture</Link>}
+                        {hasLink && showLink && <Link className= 'link3' to={'/lectures/'+lectureName}>Lecture</Link>}
                     </div>
                 </div>
                 <p>{text}</p>
@@ -20,7 +20,7 @@ export const Response = ({timeStamp, keyword, text, showLink, hasLink}) => {
     else {
         return (
             <div className="response">
-                {showLink && <h2>Found in Module X week Y lecture Z: Lecture Name</h2>}
+                <p>{'Time Stamp: "'+timeStamp+'"'}</p>
                 <p>{text}</p>
             </div>
         )

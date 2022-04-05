@@ -3,20 +3,18 @@ import { useState, useEffect} from 'react'
 import Response from './Response.js'
 import mag from '../mag.png'
 
-export const SearchBar = ({inputV, value, sLink, hLink}) => {
+export const SearchBar = ({lectureFilter, value, sLink, hLink}) => {
 
     const [newValue, setValue] = useState(value)
     const [response, setResponse] = useState('Your Answers go here')
     const [phBool, setPHbool] = useState(true)
     const [showLink, setShowLink] = useState(sLink)
     const [hasLink, setHasLink] = useState(hLink)
-    const [allResults, setAllResults] = useState(new Map())
+    const [allResults, setAllResults] = useState(Array())
 
    const fetchResp = async () => {
        const res = await fetch('http://localhost:3001/api/discovery/query/'+newValue)
-       //console.log('http://localhost:3001/api/discovery/query/'+newValue)
        const data = await res.json()
-       //console.log(data)
        return data
    }
 
@@ -37,7 +35,7 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
         setResponse('');
         const respFromServer = await fetchResp()
         console.log(respFromServer)
-        const results = new Map()
+        const results = []
         const numResults = respFromServer['result']['matching_results']
         console.log(numResults)
         if (numResults == 0){
@@ -45,14 +43,32 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
         }
         else {
             
-            for (let i = 0; i < numResults; i++) {
-                try { 
-                    setPHbool(false)
-                    results.set(respFromServer['result']['results'][i]['TEXT'],
-                               respFromServer['result']['results'][i]['TIME_STAMP'])
-                } catch(err) {
-                    console.log("you've broken")
-                    break
+            if(lectureFilter ==='n') {
+                for (let i = 0; i < numResults; i++) {
+                    try { 
+                        setPHbool(false)
+                        results.push([respFromServer['result']['results'][i]['TEXT'],
+                                    respFromServer['result']['results'][i]['TIME_STAMP'],
+                                    respFromServer['result']['results'][i]['Header']])
+                    } catch(err) {
+                        console.log("you've broken")
+                        break
+                    }
+                }
+            }
+            else {
+                for (let i = 0; i < numResults; i++) {
+                    try { 
+                        setPHbool(false)
+                        if(respFromServer['result']['results'][i]['Header'] == lectureFilter) {
+                            results.push([respFromServer['result']['results'][i]['TEXT'],
+                            respFromServer['result']['results'][i]['TIME_STAMP'],
+                            respFromServer['result']['results'][i]['Header']])
+                        }
+                    } catch(err) {
+                        console.log("you've broken")
+                        break
+                    }
                 }
             }
         setShowLink(true)
@@ -84,9 +100,9 @@ export const SearchBar = ({inputV, value, sLink, hLink}) => {
                     <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
                 </form>
 
-                    {Array.from( allResults ).map(([key, value], i) =>
-                        <Response key ={i} timeStamp = {value} keyword= {newValue} text = {key} showLink = {showLink} hasLink = {hasLink}/>
-                    )} 
+                {allResults.map((res, i) => (
+                    <Response key ={i} lectureName={res[2]} timeStamp={res[1]} keyword= {newValue} text = {res[0]} showLink = {showLink} hasLink = {hasLink}/>
+                ))} 
   
                 <div className="stopShake"/>
             </div>

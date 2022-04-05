@@ -13,7 +13,7 @@ export const Search = () => {
                 <Button className='btn'  text='Saif' resp ='p'/>
                 </div>
             </div>
-            <SearchBar num = {3} inputV = 'Sub' value = '' sLink = {false} hLink = {true}/>
+            <SearchBar lectureFilter='n' value = '' sLink = {false} hLink = {true}/>
         </div>
     )
 }

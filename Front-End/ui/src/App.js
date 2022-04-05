@@ -1,12 +1,10 @@
 import './App.css';
-import SearchBar from './Components/SearchBar.js'
 import Search from './Components/Search.js'
-import { Link } from 'react-router-dom'
-import ReactPlayer from 'react-player'
-import video from './videos/r.mp4'
+import LecturePage from './Components/LecturePage';
 import Title from './Components/Title.js'
-import arrow from './images/arrowLeft.png'
-
+import LcaVid from './videos/Lecture_3_LCA.mp4'
+import AgileVid from './videos/Lecture_7_Agile_Development.mp4'
+import DagVid from './videos/Lecture_11_DAG_Challenge.mp4'
 
   const HomePage = () => {
     
@@ -25,35 +23,29 @@ import arrow from './images/arrowLeft.png'
     )
   }
 
-    
-  //export default HomePage;
-  const LecturePage = () => {
-
-
+  const LCA = () => {
     return (
-      <div className="Container">
-        <h1>Lecture Page</h1>
-        <Link className='backLink' to='/'>
-        <input className = "arrow" type="image" src={arrow} alt="Submit" width="60" height="60"/> 
-        </Link>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-         }}
-        className='player-wrapper'>
-            <ReactPlayer
-            style={{marginBottom: "20px",marginTop: "20px", border: "50px, solid, black"}}
-            className='react-player'
-            url= {video}
-            width='60%'
-            height='60%'
-            controls = {true}
-            />
-        </div>
-        <SearchBar title='query: ' inputV = 'Sub' value = '' sLink = {false} hLink = {false} />
+      <div>
+        <LecturePage title ='LCA' video={LcaVid} videoName='Lecture 1 Introduction B' />
       </div>
     )
   };
-  export {LecturePage, HomePage, Header};
+
+  const Agile = () => {
+    return (
+      <div>
+        <LecturePage title ='Agile' video={AgileVid} videoName='Lecture 7 Agile Development' />
+      </div>
+    )
+  };
+
+  const DAG = () => {
+    return (
+      <div>
+        <LecturePage title ='DAG' video={DagVid} videoName='Lecture 1 Introduction A' />
+      </div>
+    )
+  };
+
+  export {DAG, Agile, LCA, HomePage, Header};
 
