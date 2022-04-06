@@ -13,7 +13,7 @@ export const Search = () => {
                 <Button className='btn'  text='Saif' resp ='p'/>
                 </div>
             </div>
-            <SearchBar lectureFilter='n' value = '' sLink = {false} hLink = {true}/>
+            <SearchBar suggestedQ ='Who is Margaret Hamilton' lectureFilter='n' value = '' sLink = {false} hLink = {true}/>
         </div>
     )
 }

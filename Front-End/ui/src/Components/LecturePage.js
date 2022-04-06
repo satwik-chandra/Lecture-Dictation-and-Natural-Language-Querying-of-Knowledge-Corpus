@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import arrow from '.././images/arrowLeft.png'
 import ReactPlayer from 'react-player'
 
-const LecturePage = ({title, video, videoName}) => {
+const LecturePage = ({suggestedQ, title, video, videoName}) => {
     return (
         <div>
             <h1>{title}</h1>
@@ -14,7 +14,7 @@ const LecturePage = ({title, video, videoName}) => {
             <div className='player-wrapper'>
                 <ReactPlayer className='react-player' url= {video} width='60%' height='60%' controls = {true}/>
                 </div>
-            <SearchBar lectureFilter={videoName.replace(/\s/g, "")} title='query: ' inputV = 'Sub' value = '' sLink = {false} hLink = {false} />
+            <SearchBar suggestedQ ={suggestedQ} lectureFilter={videoName.replace(/\s/g, "")} title='query: ' inputV = 'Sub' value = '' sLink = {false} hLink = {false} />
         </div>
     )
 }

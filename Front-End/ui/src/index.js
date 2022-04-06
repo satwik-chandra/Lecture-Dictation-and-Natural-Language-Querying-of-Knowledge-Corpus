@@ -14,6 +14,7 @@ ReactDOM.render(
       <Route exact path='/lectures/Lecture1IntroductionA' element={<DAG />}/>
       <Route exact path='/lectures/Lecture7AgileDevelopment' element={<Agile />}/>
       <Route exact path='/lectures/Lecture1IntroductionB' element={<LCA />}/>
+      <Route path='*' element={<DAG />}/>
     </Routes>
     
   </Router>,

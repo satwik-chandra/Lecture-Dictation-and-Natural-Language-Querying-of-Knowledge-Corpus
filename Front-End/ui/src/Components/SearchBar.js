@@ -3,7 +3,7 @@ import { useState, useEffect} from 'react'
 import Response from './Response.js'
 import mag from '../mag.png'
 
-export const SearchBar = ({lectureFilter, value, sLink, hLink}) => {
+export const SearchBar = ({suggestedQ, lectureFilter, value, sLink, hLink}) => {
 
     const [newValue, setValue] = useState(value)
     const [response, setResponse] = useState('Your Answers go here...')
@@ -89,7 +89,7 @@ export const SearchBar = ({lectureFilter, value, sLink, hLink}) => {
                 </form>
                 <div className = "responsePlaceHolder">
                     <p >{response}</p>
-                    <p >Why not try <i>Who is Margaret Hamilton?</i></p>
+                    <p>{response && "Why not try"}</p><p >{response && <i>{suggestedQ}</i>}</p>
                 </div>
             </div>
         )

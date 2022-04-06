@@ -1,5 +1,16 @@
+import { yellow } from '@mui/material/colors';
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+function ghi (text, highlight) {
+    text = text+''
+    const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
+    return <span> { parts.map((part, i) => 
+        <span key={i} style={part.toLowerCase() === highlight.toLowerCase() ? { backgroundColor: 'yellow' } : {} }>
+            { part }
+        </span>)
+    } </span>;
+}
 
 export const Response = ({lectureName, timeStamp, keyword, text, showLink, hasLink}) => {
 
@@ -13,7 +24,7 @@ export const Response = ({lectureName, timeStamp, keyword, text, showLink, hasLi
                         {hasLink && showLink && <Link className= 'link3' to={'/lectures/'+lectureName}>Lecture</Link>}
                     </div>
                 </div>
-                <p>{text}</p>
+                {ghi(text, keyword)}
             </div>
         )
     }
@@ -21,7 +32,7 @@ export const Response = ({lectureName, timeStamp, keyword, text, showLink, hasLi
         return (
             <div className="response">
                 <p>{'Time Stamp: "'+timeStamp+'"'}</p>
-                <p>{text}</p>
+                {ghi(text, keyword)}
             </div>
         )
     }
