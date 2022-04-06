@@ -9,24 +9,27 @@ body {
   word-spacing: 3px;
 }
 
-.btn-group .btn {  
+.btn-group .btn {
   display: inline-block;
-  background: #0e73b8;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  background: white;
+  border: 1px solid grey;
+  color: black;
+  padding: 5px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 12px;
   font-family: inherit;
   cursor: pointer;
-  float: center;
+}
 
+.btnclicked{
+  background-color: 'grey';
 }
 
 .btn-group .btn:hover {
   transform: scale(1.1);
-  background-color: grey;
+  background-color: #0e73b8;
+  color: white;
 }
 
 .header {
@@ -141,11 +144,13 @@ body {
 }
 
 .brace {
+  margin-left: 55%; 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: .25px;
 }
 
 .searchBar::placeholder {
