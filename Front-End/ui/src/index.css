@@ -122,7 +122,11 @@ body {
   height: 40px;
 }
 
-input[type=image] {
+.timeStamp {
+  white-space: pre;
+}
+
+.mag[type=image] {
   background-color: lightgray;
   padding-top: 6px;
   padding-right: 27px;

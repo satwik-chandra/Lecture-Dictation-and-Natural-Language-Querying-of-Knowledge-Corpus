@@ -8,7 +8,7 @@ export const Response = ({lectureName, timeStamp, keyword, text, showLink, hasLi
             <div className="response">
                 {showLink && <h2>{lectureName}</h2>}
                 <div className='cardInfo'>
-                    <p>{'Time Stamp: "'+timeStamp+'"'}</p>
+                    <p><b>Time Stamp:</b></p><p className='timeStamp'> {'"'+timeStamp+'"'}</p>
                     <div className="lecLink">
                         {hasLink && showLink && <Link className= 'link3' to={'/lectures/'+lectureName}>Lecture</Link>}
                     </div>
