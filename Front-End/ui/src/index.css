@@ -48,7 +48,7 @@ body {
   margin: 70px;
   outline: black solid 0px;
   background-color: white;
-  animation: 1.2s ease-in 0s 1 slideUp;
+  animation: 1.2s cubic-bezier(0, 1.18, 1, 0.95) 0s 1 slideUp;
 }
 
 
@@ -122,9 +122,18 @@ body {
   height: 40px;
 }
 
+input[type=image] {
+  background-color: lightgray;
+  padding-top: 6px;
+  padding-right: 27px;
+  padding-left: 27px;
+  padding-bottom: 7px;
+  border-right: 1px solid black;
+}
+
 .mag {
-  margin-left: -30px;
-  margin-top: -20px;
+  margin-left: -79px;
+  margin-bottom: -16px;
 }
 
 .brace {

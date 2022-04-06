@@ -84,7 +84,7 @@ export const SearchBar = ({lectureFilter, value, sLink, hLink}) => {
                     <label>
                         <input className='searchBar' placeholder= 'Search...' type="text" value={newValue} onChange={handleChange}/> 
                     </label> 
-                    <input className = "mag" type="image" src={mag} alt="Submit" width="18" height="24"/>
+                    <input className = "mag" type="image" src={mag} alt="Submit" width="24" height="32"/>
                 </form>
                     <p className = "responsePlaceHolder">{phBool && response}</p>
             </div>
