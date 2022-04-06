@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Times New Roman',Georgia,Serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   text-align: center;
   background-color: #fbfbf8;
   color: black;
@@ -81,7 +81,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
-  font-family: inherit;
+  font-family: 'IBM Plex Sans', sans-serif;;
 } 
 
 .link3 {
@@ -99,7 +99,7 @@ body {
 {
   text-align: center;
   color: white;
-  font-family: Quicksand;
+  font-family: 'IBM Plex Sans', sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -110,6 +110,7 @@ body {
 .logo {
   height: 11%;
   width: 11%;
+  margin: 1%
 }
 
 .link1 {
@@ -134,13 +135,13 @@ body {
   padding-top: 6px;
   padding-right: 27px;
   padding-left: 27px;
-  padding-bottom: 7px;
-  border-right: 1px solid black;
+  padding-bottom: 6px;
+
 }
 
 .mag {
   margin-left: -79px;
-  margin-bottom: -16px;
+  margin-bottom: -15px;
 }
 
 .brace {
@@ -154,24 +155,30 @@ body {
 }
 
 .searchBar::placeholder {
-  font-family: 'Times New Roman',Georgia,Serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
 }
 
 input[type=text] {
-  font-family: 'Times New Roman',Georgia,Serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
 }
 
 .copyright {
-  margin-top: -1px;
-  padding-left: 20px;
-  padding-right: 15px;
+  height: 10%;
+  width: 10%;
 }
 
 .workingTitle {
   margin-top: 50px;
   margin-right: 4%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 60px;
+}
+
+.lectureTitle {
+  margin-top: 2%;
+  font-size: 40px;
 }
 
 .responsePlaceHolder {

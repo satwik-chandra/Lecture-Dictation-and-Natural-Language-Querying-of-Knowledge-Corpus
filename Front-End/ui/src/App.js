@@ -26,7 +26,7 @@ import DagVid from './videos/Lecture_11_DAG_Challenge.mp4'
   const LCA = () => {
     return (
       <div>
-        <LecturePage suggestedQ ='' title ='LCA' video={LcaVid} videoName='Lecture 1 Introduction B' />
+        <LecturePage suggestedQ ='Show me a Picture' title ='Lecture 1 LCA' video={LcaVid} videoName='Lecture 1 Introduction B' />
       </div>
     )
   };
@@ -34,7 +34,7 @@ import DagVid from './videos/Lecture_11_DAG_Challenge.mp4'
   const Agile = () => {
     return (
       <div>
-        <LecturePage suggestedQ ='' title ='Agile' video={AgileVid} videoName='Lecture 7 Agile Development' />
+        <LecturePage suggestedQ ='What is Agile Development?' title ='Lecture 7 Agile Development' video={AgileVid} videoName='Lecture 7 Agile Development' />
       </div>
     )
   };
@@ -42,7 +42,7 @@ import DagVid from './videos/Lecture_11_DAG_Challenge.mp4'
   const DAG = () => {
     return (
       <div>
-        <LecturePage suggestedQ ='' title ='DAG' video={DagVid} videoName='Lecture 1 Introduction A' />
+        <LecturePage suggestedQ ='who is margaret Hamilton?' title ='Lecture 2 DAG' video={DagVid} videoName='Lecture 1 Introduction A' />
       </div>
     )
   };

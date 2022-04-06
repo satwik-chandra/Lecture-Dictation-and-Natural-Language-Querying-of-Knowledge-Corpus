@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 const LecturePage = ({suggestedQ, title, video, videoName}) => {
     return (
         <div>
-            <h1>{title}</h1>
+            <h1 className='lectureTitle'>{title}</h1>
             <Link className='backLink' to='/'>
                 <input className = "arrow" type="image" src={arrow} alt="Submit" width="60" height="60"/> 
             </Link>
