@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Times New Roman',Georgia,Serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   text-align: center;
   background-color: #fbfbf8;
   color: black;
@@ -9,24 +9,27 @@ body {
   word-spacing: 3px;
 }
 
-.btn-group .btn {  
+.btn-group .btn {
   display: inline-block;
-  background: #0e73b8;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  background: white;
+  border: 1px solid grey;
+  color: black;
+  padding: 5px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 12px;
   font-family: inherit;
   cursor: pointer;
-  float: center;
+}
 
+.btnclicked{
+  background-color: 'grey';
 }
 
 .btn-group .btn:hover {
   transform: scale(1.1);
-  background-color: grey;
+  background-color: #0e73b8;
+  color: white;
 }
 
 .header {
@@ -48,7 +51,7 @@ body {
   margin: 70px;
   outline: black solid 0px;
   background-color: white;
-  animation: 1.2s ease-in 0s 1 slideUp;
+  animation: 1.2s cubic-bezier(0, 1.18, 1, 0.95) 0s 1 slideUp;
 }
 
 
@@ -78,7 +81,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
-  font-family: inherit;
+  font-family: 'IBM Plex Sans', sans-serif;;
 } 
 
 .link3 {
@@ -96,7 +99,7 @@ body {
 {
   text-align: center;
   color: white;
-  font-family: Quicksand;
+  font-family: 'IBM Plex Sans', sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -107,6 +110,7 @@ body {
 .logo {
   height: 11%;
   width: 11%;
+  margin: 1%
 }
 
 .link1 {
@@ -122,38 +126,59 @@ body {
   height: 40px;
 }
 
+.timeStamp {
+  white-space: pre;
+}
+
+.mag[type=image] {
+  background-color: lightgray;
+  padding-top: 6px;
+  padding-right: 27px;
+  padding-left: 27px;
+  padding-bottom: 6px;
+
+}
+
 .mag {
-  margin-left: -30px;
-  margin-top: -20px;
+  margin-left: -79px;
+  margin-bottom: -15px;
 }
 
 .brace {
+  margin-left: 55%; 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: .25px;
 }
 
 .searchBar::placeholder {
-  font-family: 'Times New Roman',Georgia,Serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
 }
 
 input[type=text] {
-  font-family: 'Times New Roman',Georgia,Serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
 }
 
 .copyright {
-  margin-top: -1px;
-  padding-left: 20px;
-  padding-right: 15px;
+  height: 10%;
+  width: 10%;
 }
 
 .workingTitle {
   margin-top: 50px;
   margin-right: 4%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 60px;
+}
+
+.lectureTitle {
+  margin-top: 2%;
+  font-size: 40px;
 }
 
 .responsePlaceHolder {
