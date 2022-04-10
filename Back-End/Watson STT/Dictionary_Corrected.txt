@@ -203,3 +203,125 @@ we know in agile it's going to be
 you know iterative it's going to do pieces of work
 but in the extreme idea
 every two weeks and other methodologies
+you don't consider a piece of work finished
+correct unless it runs against against
+if they haven't committed yet
+see if it tests and run before I build it
+function or class I'll run the tests
+to see if I've broken anything
+the compiler think of it that way
+okay so that's iterations
+the software engineering book
+unfortunately their display
+the key pieces in the center is the iteration
+and if you if you kind of
+go from the iteration to tests
+could be very rapid computer or could be daily
+back to the next iteration
+into the iteration
+to do with this planning
+that that end up being
+put into iteration
+process by which tasks
+are selected into an iteration
+let's just tidy up a couple of things
+you know the the entry
+literally just scraps of paper
+there's no documentation going on here
+small cards A4 page
+just to complete out your
+spikes are about
+max 2 week piece of research
+it finishes after that period
+the terminlogy been using
+will see literally just scraps
+in a moment and that starts to feed
+tasks into the iterations
+for airing and grab more
+the idea here
+I'm gonna put up some text
+and anything could be chosen
+they might be the things that you want to do
+they'll work it out
+and then fit the time
+but keep your iterations solid
+need to do task A and task B
+the customer who chooses what gets done
+pretty strong about that
+it's not the engineers there are agile methods
+it's kind of like a doctor
+and these are some possible treatments
+hopefully that gives you a sense of it
+top there isn't it
+there's no document doing an analysis of this
+there's just somebody writes down their stuff
+and if all the team understands
+you're not going to hand this task
+between all all the parties
+and there is some kind of organisational structure
+the obvious most simple one is
+that are to do
+kind of structure okay
+although the the extreme programming
+I don't think
+just doing extreme programming and been doing
+and scrum are the
+sync up of these flavors
+a sense of why somebody
+why would somebody not want to have documentation at all
+and trust this kind
+for for building
+contacts in the environment would be to
+the right one to try these methods
+and that's obviously and I showed you this image before
+of of all of that
+back to this idea again
+specification agreed you know
+what that actually feels like
+there's a planning piece in that
+in that process and the planning occurs in three stages
+you need iterations
+and you know then it'll work
+try to chunk those remember
+remember the iterative development methodology
+how those and
+designed artifacts yet
+it's kind of literally
+and you know x y and z
+maybe a bit more detail
+so they gather those
+how you're gonna chunk those
+as kind of
+two weekly iterations or sprints
+and will do six sprints to get there
+that that that release
+but anyway you do that kind of iteration level
+but you are not documenting
+in a proper development iterative methodology
+this is almost you might say
+part of the team too
+part of the team aswell so we'll see if we get there
+next piece so once
+you know a bag of tasks
+move into your iteration planning
+then generally call the sprint
+that's about
+and working out based on that
+and the available manpower
+that's your sprint plan
+there's a good reason for that
+all of the iterations
+doing an iterative development methodology
+that you know iterations
+that was supposed to be done in one iteration
+the other reason is because that
+to this kind of methodology
+they are just hints and hunches
+into the next iteration should have
+I'm gonna plan our iteration
+to only find then that
+that half the things didn't need to be done
+the other half have to be
+delayed because other things didn't
+suggest strongly you look into bullet journaling
+say it again do look into bullet journaling
