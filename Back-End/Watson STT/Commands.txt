@@ -1,7 +1,7 @@
 pip install --upgrade "ibm-watson>=5.3.1"
 
 **** Separate Curl Command ****
-curl -X POST -u "apikey:QbYLYo-ZaBElYCTnvAVxgC7Qzzl1jqDID0Jsyp4J6eoH" ^
+curl -X POST -u "apikey:X" ^
 --header "Content-Type: audio/flac" ^
 --data-binary @GithubAPIPythonPart1.flac ^
-"https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/871ebfc6-583e-4caa-9fa3-c2f55df33c4e/v1/recognize"
+"https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/Y/v1/recognize"
