@@ -1,24 +1,27 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import Response from './Response.js'
-import $ from 'jquery'
+import React, { useState } from 'react'
 
-export const Button = ({color, text}) => {
 
-    const onClick = (_e) => {
-        console.log(text," has been pressed");
+export const Button = ({text}) => {
+
+    const handleClick=(e)=>{
+        console.log(text, "this is working fine");
+        e.preventDefault();
+        if (e.target.style.backgroundColor = '#0e73b8'){
+            e.target.style.backgroundColor = 'white'
+        }
+        if (e.target.style.backgroundColor = 'white'){
+            e.target.style.backgroundColor = '#0e73b8'
+        }
+        console.log(e.target);
     }
 
     return (
     <div>
-        <button onClick={onClick} 
-        style={{backgroundColor: color}}
-        className='btn'>{text}</button>
+        
+        <button onClick={handleClick}
+         className='btn'>{text}</button>
     </div>
     )
 }
 
 export default Button
-
-
-

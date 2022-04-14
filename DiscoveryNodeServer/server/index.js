@@ -23,6 +23,7 @@ var queryParams = {
   return_ : ["Header", "TEXT", "TIME_STAMP"],
   count: 10,
   spelling_suggestions: true,
+  highlight: true,
   naturalLanguageQuery: "",  //this is the query that is passed to the discovery service
 };
 

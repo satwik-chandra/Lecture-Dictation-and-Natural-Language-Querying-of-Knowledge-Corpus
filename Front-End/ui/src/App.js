@@ -1,13 +1,10 @@
 import './App.css';
-import Button from './Components/Button.js'
-import Response from './Components/Response.js'
-import SearchBar from './Components/SearchBar.js'
 import Search from './Components/Search.js'
-import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import ReactPlayer from 'react-player'
-import video from './videos/r.mp4'
+import LecturePage from './Components/LecturePage';
 import Title from './Components/Title.js'
+import LcaVid from './videos/Lecture_3_LCA.mp4'
+import AgileVid from './videos/Lecture_7_Agile_Development.mp4'
+import DagVid from './videos/Lecture_11_DAG_Challenge.mp4'
 
   const HomePage = () => {
     
@@ -26,27 +23,29 @@ import Title from './Components/Title.js'
     )
   }
 
-    
-  //export default HomePage;
-  const LecturePage = () => {
-
-
+  const LCA = () => {
     return (
-      <div className="Container">
-        <h1>Lecture Page</h1>
-        <div className='player-wrapper'>
-          <Link className = "back" to='/'>Back</Link>
-          <ReactPlayer
-          className='react-player'
-          url= {video}
-          width='60%'
-          height='60%'
-          controls = {true}
-          />
-        </div>
-        <SearchBar title='query: ' inputV = 'Sub' value = '' resp='' sLink = {false} hLink = {false} />
+      <div>
+        <LecturePage suggestedQ ='Show me a Picture' title ='Lecture 1 LCA' video={LcaVid} videoName='Lecture 1 Introduction B' />
       </div>
     )
   };
-  export {LecturePage, HomePage, Header};
+
+  const Agile = () => {
+    return (
+      <div>
+        <LecturePage suggestedQ ='What is Agile Development?' title ='Lecture 7 Agile Development' video={AgileVid} videoName='Lecture 7 Agile Development' />
+      </div>
+    )
+  };
+
+  const DAG = () => {
+    return (
+      <div>
+        <LecturePage suggestedQ ='who is margaret Hamilton?' title ='Lecture 2 DAG' video={DagVid} videoName='Lecture 1 Introduction A' />
+      </div>
+    )
+  };
+
+  export {DAG, Agile, LCA, HomePage, Header};
 

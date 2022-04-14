@@ -1,0 +1,78 @@
+possibly more likely Tuesday
+obviously the theoretical one and the practical one
+practical one this theoretical one is
+which is a specific methodology in an agile
+agile development
+and you know live by and swear by
+is a real hard core agile development
+there are a series of different
+practices and principles
+you want to stay clear off for the rest of your life
+but enough of me waffling on
+sometimes called XP
+and you know people would talk about XP
+XP development and you know XP tools and so on
+invented by this guy
+he's the most he's the most important
+so this is Kent Beck
+and around about nineteen ninety six
+Chrysler Comprehensive Compensation System
+Kent Beck at the time
+and the Chrysler people
+they thought he could help them
+sort out some problems in the in the development
+and so he joined them
+I spent about three or four years there
+so by the nineteen ninety nine
+working there with teams
+so called C3 system
+felt that really software development
+he isn't a one trick pony he is
+serious guy so nineteen ninety nine
+and he called it extreme programming
+and this is his book
+there are a series of principles
+that he felt were important
+you know that's important in any methodology
+you know apply seven plus or minus two rule can only do so much can only can only
+keep up with a certain
+from the top right simple design
+extreme version of that idea
+remember this extreme methodology
+as in maybe release two or three times a day
+extreme
+incremental planning and that the key there
+plan forwards too far
+and we'll go again from the top right
+find someone else has changed it
+and you don't get annoyed by that
+cause that can only really work
+you don't get to be a speacialist in graphics or the user interface design
+you have to be kind of like Jack of all trades
+is a collective piece
+the code ready for the release
+that's not allowed in this methodology
+everything has to move smoothly
+we spoken about that I won't labour it
+sort of the increment or the
+and each part was built to spec
+often people find they don't for various
+kind of like the weirdest one
+pair programming
+but this is genuinely
+I'll point you to some videos
+genuinely the idea
+kind of like police in a police car
+who's going to do that with you
+not that you are parallel play
+to any project manager
+you're using two people to do one job
+these guys say this is a better way of doing things
+go through some of
+and I promise we won't go too long on this one
+first thing is the iterations
+so what does the iteration look like
+we know in agile it's going to be
+you know iterative it's going to do pieces of work
+but in the extreme idea
+every two weeks and other methodologies
