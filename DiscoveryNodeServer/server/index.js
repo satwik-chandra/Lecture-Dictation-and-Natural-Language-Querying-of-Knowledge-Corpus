@@ -13,7 +13,7 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 const discovery = new DiscoveryV2({
   version: '2020-08-30',
   authenticator: new IamAuthenticator({
-    apikey: 'WIgvKeM8B3zcEEgVwX99IdjYUlKv2eRzhQh4qi6bqiRe',
+    apikey: '',
   }),
   serviceUrl: 'https://api.eu-gb.discovery.watson.cloud.ibm.com/instances/881f601a-c215-493a-bd7e-1f94b5ce8f53',
 });
